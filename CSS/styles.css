@@ -1,0 +1,74 @@
+:root {
+    --bg:#FFFFFF;
+    --bgGris:#f1f1f1;
+    --nar:#ee6b08;
+    --verBtn:#3a7736;
+    --verBg:#2A4123;
+}
+
+.title{
+    background-color: var(--nar);
+    padding-top: 30px;
+    height: 150px;
+}
+
+.nombre{
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubicacion{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#imgTag{
+    height:5%;
+}
+
+#logo{
+    height: 100%;
+}
+
+.banner{
+    height: 100px;
+}
+
+#carousel{
+    height: 600px;
+}
+
+.opiniones{
+    display: flex;
+    background-color: var(--bgGris);
+    margin-top: 10px;
+    
+}
+
+.opinion{
+    width: 25%;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--verBg);
+    height: 100px;
+}
+
+
+@media (max-width: 768px) {
+  .opiniones {
+    align-items: center;
+    display: block; /* o flex-direction: column, según lo que busques */
+  }
+
+  .opinion {
+    width: 100%;
+  }
+}
