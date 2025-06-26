@@ -38,14 +38,199 @@
     height: 100px;
 }
 
-#carousel{
-    height: 600px;
+.nav {
+  position: relative;
+  height: 100vh;
 }
+
+#carousel,
+#carousel .carousel-inner,
+#carousel .carousel-item,
+#carousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.custom-navbar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+}
+
+.nav-btn {
+  background-color: #ee6b08;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.nav-btn:hover {
+  background-color: var(--verBtn); /* Naranja más oscuro al pasar el mouse */
+}
+
+
+
+/* Contenedor principal */
+.seccion-menu {
+  height: 600px;
+  margin: 30px 0 30px 100px; /* margen arriba, abajo e izquierda */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* Imagen principal */
+.object-cover {
+  object-fit: cover;
+  height: 100%;
+  margin-left: 5rem;
+}
+
+/* Columna de info */
+.info-menu {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+/* Contenido de info */
+.titulo-comida {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.horario {
+  font-size: 1rem;
+}
+
+.verMenu {
+  width: 200px;
+  height: 200px; /* o lo que necesites */
+  position: relative;
+  z-index: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto; /* 🔥 esto lo centra tanto horizontal como verticalmente dentro del espacio disponible */
+}
+
+.verMenu::before {
+  content: "";
+  position: absolute;
+  width: 100%;        /* 🔥 cubrir todo */
+  height: 100%;       /* 🔥 cubrir todo */
+  background-image: url(../IMG/jpg/Logo.webp);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.iconos-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icono-circular {
+  width: 20px;
+  height: 20px;
+  background-color: #111;
+  border-radius: 50%;
+}
+
+/* Imagen de evento */
+.evento-img {
+  max-width: 150px;
+  border-radius: 5px;
+}
+
+/* Sombra como imagen */
+.sombra-img {
+  height: 100%;
+  background-image: url('../IMG/jpg/sombra.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .seccion-menu {
+    height: auto; /* 🔥 se adapta en móviles */
+    margin: 20px 0;
+  }
+
+  .sombra-img {
+    display: none !important;
+  }
+
+  .info-menu {
+    text-align: center;
+    align-items: center;
+    padding: 0px 10px;
+  }
+
+  .logo-menu,
+  .evento-img {
+    max-width: 80%;
+  }
+
+  .object-cover{
+    margin-left: 0;
+    padding-bottom: 20px;
+  }
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shadow-right {
+    display: none !important;
+  }
+
+  .info-menu {
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-menu,
+  .evento-img {
+    max-width: 80%;
+  }
+}
+
+
+
+
+
 
 .opiniones{
     display: flex;
     background-color: var(--bgGris);
-    margin-top: 10px;
+    margin-top: 50px;
     
 }
 
