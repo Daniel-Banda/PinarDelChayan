@@ -159,13 +159,13 @@
   border-radius: 50%;
 }
 
-/* Imagen de evento */
+
 .evento-img {
   max-width: 150px;
   border-radius: 5px;
 }
 
-/* Sombra como imagen */
+
 .sombra-img {
   height: 100%;
   background-image: url('../IMG/jpg/sombra.png');
@@ -174,10 +174,10 @@
   background-position: right;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .seccion-menu {
-    height: auto; /* 🔥 se adapta en móviles */
+    height: auto; 
     margin: 20px 0;
   }
 
@@ -257,3 +257,56 @@
     width: 100%;
   }
 }
+
+/* ----------------------------Platillos--------------------------------------------------*/
+  .bannerPlatillos{
+    position: relative;
+    width: 100vh;
+  }  
+
+  .platillosNavbar{
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10;
+  }
+
+
+  .btn-warning {
+    background-color: var(--nar) !important;
+  }
+
+  .btn-warning:hover {
+    background-color: var(--verBtn) !important;
+  }
+
+  .bannerInfo{
+    background-color: var(--nar);   
+  }
+
+  .nav-tabs{
+    height: fit-content;
+    padding-bottom: 10px;
+  }
+
+  .nav-tabs .nav-link {
+  color: var(--bg);
+  background-color: var(--nar);
+  border: none;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--verBtn); /* Verde */
+  color: white;
+}
+
+#menuTabs .nav-link.active {
+  background-color: var(--verBtn);
+  color: white;
+}
+
+
