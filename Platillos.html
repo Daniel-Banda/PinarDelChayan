@@ -13,14 +13,40 @@
 <body>
 
 <section class="bannerPlatillos">
-    <img src="./IMG/jpg/bannerPlatillos.webp" alt="">
+  <img src="./IMG/jpg/bannerPlatillos.webp" alt="">
 
-  <div class="platillosNavbar">
-    <a href="./Index.html" class="nav-btn">Home</a>
-    <a href="./Platillos.html" class="nav-btn">PLATILLOS</a>
-    <a href="./Bebidas.html" class="nav-btn">Bebidas</a>
-    <a href="./Eventos.html" class="nav-btn">EVENTOS ESPECIALES</a>
+ <!-- Botón hamburguesa SOLO UNO y alineado a la izquierda -->
+<button class="btn btn-outline-light d-md-none position-absolute top-0 start-0 m-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+  <i class="fas fa-bars fs-2"></i>
+</button>
+
+<!-- Offcanvas desde la izquierda -->
+<div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+  <div class="offcanvas-header border-0">
+    <h5 class="offcanvas-title fw-bold text-white" id="offcanvasMenuLabel">Menú</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
   </div>
+  <div class="offcanvas-body d-flex flex-column align-items-center gap-3">
+    <a href="./Index.html" class="offcanvas-link">Home</a>
+    <a href="./Platillos.html" class="offcanvas-link active">PLATILLOS</a>
+    <a href="./Bebidas.html" class="offcanvas-link">Bebidas</a>
+    <a href="./Eventos.html" class="offcanvas-link">EVENTOS ESPECIALES</a>
+  </div>
+</div>
+
+
+
+<!-- Imagen del banner -->
+<img src="./IMG/jpg/bannerPlatillos.webp" alt="">
+
+<!-- Navbar visible solo en desktop -->
+<div class="platillosNavbar d-none d-md-flex">
+  <a href="./Index.html" class="nav-btn">Home</a>
+  <a href="./Platillos.html" class="nav-btn active">PLATILLOS</a>
+  <a href="./Bebidas.html" class="nav-btn">Bebidas</a>
+  <a href="./Eventos.html" class="nav-btn">EVENTOS ESPECIALES</a>
+</div>
+
 </section>
 
 
@@ -28,14 +54,21 @@
 <div class="container px-0 my-5">
 
   <!-- Botón y título -->
-  <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
-    <a href="menu-bebidas.html" class="btn btn-dark mb-2">Ver Menú de Bebidas</a>
-    <h3 class="m-auto fw-bold">MENÚ DE PLATILLOS</h3>
-  </div>
+<div class="container text-center mt-4">
+  <h3 class="fw-bold">MENÚ DE PLATILLOS</h3>
+</div>
+
+<div class="container d-flex justify-content-start mb-3 px-4 btn-bebidas-container">
+  <a href="menu-bebidas.html" class="btn btn-dark">Ver Menú de Bebidas</a>
+</div>
+
+
+
 
   <!-- Pestañas -->
-  <div class="container my-5">
-  <ul class="nav nav-tabs justify-content-center mb-3" id="menuTabs">
+  <div class="container menuContainer mx-6">
+  <ul class="nav nav-tabs justify-content-center flex-wrap mb-3" id="menuTabs">
+      
     <li class="nav-item">
       <button class="nav-link active" onclick="renderMenu('entradas', this)">Entradas</button>
     </li>
@@ -121,6 +154,22 @@
     </div>
   </div>
 </section>
+
+<!-- Offcanvas Bootstrap -->
+<div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+  <div class="offcanvas-header border-0">
+    <h5 class="offcanvas-title fw-bold text-white" id="offcanvasMenuLabel">Menú</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column align-items-center gap-3">
+    <a href="./Index.html" class="offcanvas-link">Home</a>
+    <a href="./Platillos.html" class="offcanvas-link active">PLATILLOS</a>
+    <a href="./Bebidas.html" class="offcanvas-link">Bebidas</a>
+    <a href="./Eventos.html" class="offcanvas-link">EVENTOS ESPECIALES</a>
+  </div>
+</div>
+
+
 
 
     <script src="./JS/Platillos.js"></script>

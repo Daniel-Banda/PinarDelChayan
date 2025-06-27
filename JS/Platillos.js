@@ -56,7 +56,7 @@ sopas: {
       { nombre: 'CAMARÓN EN SALSA ROJA', precio: 335, descripcion: '(aprox. 250 gramos)' },
       { nombre: 'MAR Y TIERRA', precio: 334, descripcion: '150 grs. de camarón y 150 grs. de arrachera en salsa roja' },
       
-      { nombre: 'QUESO FNDIDO MIXTOPOLLO EN MOLE DULCE ESTILO COLIMA ', precio: 190, descripcion: '(Pierna & Muslo)' },
+      { nombre: 'POLLO EN MOLE DULCE ESTILO COLIMA ', precio: 190, descripcion: '(Pierna & Muslo)' },
       { nombre: 'POLLO A LA CERVEZA', precio: 185, descripcion: 'Pierna y muslo en salsa cremosa de cerveza y naranja' },
       { nombre: 'PECHUGA A LAS FINAS HIERVAS', precio: 179, descripcion: '300 grs.' },
       { nombre: 'PECHUGA CON CREMA', precio: 185, descripcion: 'CHIPOTLE, CILANTRO O HUITLACOCHE (300 grs.)' },
@@ -145,9 +145,40 @@ sopas: {
   }
 };
 
-function renderMenu(category) {
-  // Agrega más secciones
-};
+function wrapText(text, maxCharsPerLine) {
+  if (!text) return '';
+  const words = text.split(' ');
+  let line = '', result = '';
+  for (const word of words) {
+    if ((line + word).length <= maxCharsPerLine) {
+      line += word + ' ';
+    } else {
+      result += line.trim() + '<br>';
+      line = word + ' ';
+    }
+  }
+  return result + line.trim();
+}
+
+
+
+function wrapTextBackwards(text, maxCharsPerLine) {
+  if (!text) return '';
+  const reversedWords = text.split(' ').reverse();
+  let line = '', result = '';
+
+  for (const word of reversedWords) {
+    if ((line.length + word.length + 1) <= maxCharsPerLine) {
+      line = word + ' ' + line;
+    } else {
+      result = line.trim() + '<br>' + result;
+      line = word + ' ';
+    }
+  }
+  return line.trim() + '<br>' + result.trim();
+}
+
+
 
 function renderMenu(tipo, button = null) {
   // Activar pestaña
@@ -161,20 +192,22 @@ function renderMenu(tipo, button = null) {
       ${data.items.map(item => `
         <div class="mb-3">
           <div class="d-flex justify-content-between">
-            <strong>${item.nombre}</strong>
+            <strong>${wrapText(item.nombre, 25)}</strong>
             <span>$${item.precio}</span>
           </div>
-          ${item.descripcion ? `<small class="text-muted">${item.descripcion}</small>` : ''}
+          ${item.descripcion ? `<small class="text-muted d-block">${wrapText(item.descripcion, 33)}</small>` : ''}
         </div>
       `).join('')}
     </div>
 
     <div class="col-md-6">
-      <div class="row row-cols-2 g-3">
+      <div class="row row-cols-2 g-2">
         ${data.imagenes.map(img => `
           <div class="col text-center">
-            <p class="fw-bold small mb-1">${img.titulo}</p>
-            <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
+          <p class="titulo-imagen d-flex align-items-end justify-content-center text-center">
+            <span>${wrapTextBackwards(img.titulo, 24)}</span>
+          </p>
+          <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
           </div>
         `).join('')}
       </div>
@@ -182,4 +215,6 @@ function renderMenu(tipo, button = null) {
   `;
 }
 
+// Mostrar menú por defecto al cargar
 document.addEventListener('DOMContentLoaded', () => renderMenu('entradas'));
+
