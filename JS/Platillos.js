@@ -19,43 +19,49 @@ const menuData = {
 
     ],
     imagenes: [
-      { src: '../IMG/jpg/guacamole.avif', titulo: 'GUACAMOLE' },
-      { src: '../IMG/jpg/quesoFundido.avif', titulo: 'QUESO FUNDIDO MIXTO' },
-      { src: '../IMG/jpg/panelaHorneada.avif', titulo: 'PANELA HORNEADA' },
-      { src: '../IMG/jpg/cecina.avif', titulo: 'CECINA' },
-      { src: '../IMG/jpg/chistorra.avif', titulo: 'CHISTORRA' },
-      { src: '../IMG/jpg/jalapenosDonCastulo.avif', titulo: 'JALAPEÑOS DON CÁSTULO' },
-      { src: '../IMG/jpg/chilesDonPolo.avif', titulo: 'CHILES DON POLO' },
-      { src: '../IMG/jpg/champinones.avif', titulo: 'CHAMPIÑONES' },
+      { src: '../IMG/jpg/platillos/guacamole.avif', titulo: 'GUACAMOLE' },
+      { src: '../IMG/jpg/platillos/quesoFundido.avif', titulo: 'QUESO FUNDIDO MIXTO' },
+      { src: '../IMG/jpg/platillos/panelaHorneada.avif', titulo: 'PANELA HORNEADA' },
+      { src: '../IMG/jpg/platillos/cecina.avif', titulo: 'CECINA' },
+      { src: '../IMG/jpg/platillos/chistorra.avif', titulo: 'CHISTORRA' },
+      { src: '../IMG/jpg/platillos/jalapenosDonCastulo.avif', titulo: 'JALAPEÑOS DON CÁSTULO' },
+      { src: '../IMG/jpg/platillos/chilesDonPolo.avif', titulo: 'CHILES DON POLO' },
+      { src: '../IMG/jpg/platillos/champinones.avif', titulo: 'CHAMPIÑONES' },
     ]
   },
 sopas: {
     items: [
+      { tipo: 'titulo', texto: 'SOPAS' },
       { nombre: "CREMA DE CHAMPIÑONES FRESCOS", precio: 95 },
       { nombre: "SOPA AZTECA", precio: 98, descripcion: 'Tortilla frita, queso, crema y aguacate' },
       { nombre: "SOPA DE VERDURAS", precio: 87 },
       { nombre: "CONSOMÉ DE POLLO", precio: 95, descripcion: '* SOLO LOS DOMINGOS' },
-
+      
+      { tipo: 'espacio' },
+      { tipo: 'titulo', texto: 'ENSALADAS' },
       { nombre: "DE LA CAMPIÑA", precio: 165, descripcion: 'Espinacas, tomate cherry, nuez de la India y queso de cabra con vinagreta de mandarina' },
       { nombre: "PINAR", precio: 158, descripcion: 'Lechuga, pera, ciruela pasa y nuez con vinagreta de arándanos' },
       { nombre: "PRIMAVERA", precio: 160, descripcion: 'Lechuga, almendra, amaranto y uvas con vinagreta de mango' },
 
     ],
     imagenes: [
-      { src: '../IMG/jpg/sopaAzteca.avif', titulo: 'SOPA AZTECA' },
-      { src: '../IMG/jpg/cremaDeChampinones.avif', titulo: 'CREMA DE CHAMPIÑONES' },
-      { src: '../IMG/jpg/ensaladaPinar.avif', titulo: 'ENSALADA PINAR' },
-      { src: '../IMG/jpg/ensaladaPrimavera.avif', titulo: 'ENSALADA PRIMAVERA' },
-      { src: '../IMG/jpg/ensaladaDeLaCampina.avif', titulo: 'ENSALADA DE LA CAMPIÑA' },
+      { src: '../IMG/jpg/platillos/sopaAzteca.avif', titulo: 'SOPA AZTECA' },
+      { src: '../IMG/jpg/platillos/cremaDeChampinones.avif', titulo: 'CREMA DE CHAMPIÑONES' },
+      { src: '../IMG/jpg/platillos/ensaladaPinar.avif', titulo: 'ENSALADA PINAR' },
+      { src: '../IMG/jpg/platillos/ensaladaPrimavera.avif', titulo: 'ENSALADA PRIMAVERA' },
+      { src: '../IMG/jpg/platillos/ensaladaDeLaCampina.avif', titulo: 'ENSALADA DE LA CAMPIÑA' },
     ]
   },
   carnes: {
     items: [
+      { tipo: 'titulo', texto: 'MOLCAJETES' },
       { nombre: "CODORNIZ EN SALSA VERDE", precio: 215, descripcion: '(3 PIEZAS)' },
       { nombre: "ARRACHERA EN SALSA VERDE", precio: 330, descripcion: '(Aprox. 300 gramos)' },
       { nombre: 'CAMARÓN EN SALSA ROJA', precio: 335, descripcion: '(aprox. 250 gramos)' },
       { nombre: 'MAR Y TIERRA', precio: 334, descripcion: '150 grs. de camarón y 150 grs. de arrachera en salsa roja' },
       
+      { tipo: 'espacio' },
+      { tipo: 'titulo', texto: 'POLLOS Y MARISCOS' },
       { nombre: 'POLLO EN MOLE DULCE ESTILO COLIMA ', precio: 190, descripcion: '(Pierna & Muslo)' },
       { nombre: 'POLLO A LA CERVEZA', precio: 185, descripcion: 'Pierna y muslo en salsa cremosa de cerveza y naranja' },
       { nombre: 'PECHUGA A LAS FINAS HIERVAS', precio: 179, descripcion: '300 grs.' },
@@ -65,6 +71,8 @@ sopas: {
       { nombre: 'SALMÓN EN SALSA AGRIDULCE ESTILO ASIÁTICO', precio: 320, descripcion: '250 grs. Con miel de abeja, soya, limón, naranja, jengibre y especias asiáticas' },
       { nombre: 'CAMARONES', precio: 335, descripcion: '280 grs. Al ajo, ajillo, diabla o media diabla' },
       
+      { tipo: 'espacio' },
+      { tipo: 'titulo', texto: 'CARNES' },
       { nombre: 'CARNE EN SU JUGO', precio: 120, descripcion: '200 grs.' },
       { nombre: 'TOCINILLA DE CERDO', precio: 165, descripcion: '300 grs.' },
       { nombre: 'CHAMORRO DE CERDO', precio: 199, descripcion: 'Adobado o adobado al horno' },
@@ -78,41 +86,48 @@ sopas: {
       { nombre: 'LENGUA DE RES EN SALSA ALMENDRADA', precio: 320, descripcion: '300 grs. *SUJETO A DISPONIBILIDAD' },
       { nombre: 'LENGUA DE RES EN SALSA VERDE', precio: 318, descripcion: '300 grs. *SUJETO A DISPONIBILIDAD' },
 
+      { tipo: 'espacio' },
+      { tipo: 'titulo', texto: 'CORTES FINOS' },
       { nombre: 'RIB EYE', precio: 460, descripcion: '450 grs. Aprox.' },
       { nombre: 'VACÍO ARGENTINO', precio: 455, descripcion: '450 grs. Aprox.' },
       { nombre: 'COWBOY', precio: 485, descripcion: '500 grs. Aprox.' },
 
+      { tipo: 'espacio' },
+      { tipo: 'titulo', texto: 'CARNES EXÓTICAS' },
+      { tipo: 'nota', texto: '*SUJETO A DISPONIBILIDAD' },
       { nombre: 'JABALÍ ASADO EN SALSA DE FRUTOS ROJOS Y VINO TINTO', precio: 470, descripcion: '300 grs.' },
       { nombre: 'BÚFALO EN SALSA DE FRUTOS  ROJOS Y VINO TINTO', precio: 470, descripcion: '300 grs.' },
       { nombre: 'CODORNIZ ASADA', precio: 199, descripcion: '3 Piezas' },
       { nombre: 'CONEJO ADOBADO O ADOBADO AL HORNO', precio: 208, descripcion: '1/2 Conejo' },
       { nombre: 'CONEJO AL VINO BLANCO Y CHAMPIÑONES', precio: 210, descripcion: '1/2 Conejo' },
+      { tipo: 'espacio' },
+      { tipo: 'nota', texto: '*No se aceptan cambios o devoluciones, tome en cuenta que éstas carnes tienen un sabor más fuerte y su consistencia no es blanda.' }
 
 
     ],
     imagenes: [
-      { src: '../IMG/jpg/marytierra.avif', titulo: 'MAR Y TIERRA' },
-      { src: '../IMG/jpg/codornizEnSalsaVerde.avif', titulo: 'CODORNIZ EN SALSA VERDE' },
-      { src: '../IMG/jpg/camaronEnSalsaRoja.avif', titulo: 'CAMARÓN EN SALSA ROJA' },
-      { src: '../IMG/jpg/arracheraEnSalsaVerde.avif', titulo: 'ARRACHERA EN SALSA VERDE' },
-      { src: '../IMG/jpg/polloEnMole.avif', titulo: 'POLLO EN MOLE DULCE ESTILO COLIMA' },
-      { src: '../IMG/jpg/polloALaCerveza.avif', titulo: 'POLLO A LA CERVEZA' },
-      { src: '../IMG/jpg/salmonAlCilantro.avif', titulo: 'SALMÓN CON CREMA DE CILANTRO' },
-      { src: '../IMG/jpg/pechugaAlCilantro.avif', titulo: 'PECHUGA CON CREMA DE CILANTRO' },
-      { src: '../IMG/jpg/salmonAgridulce.avif', titulo: 'SALMÓN EN SALSA AGRIDULCE ESTILO ASIÁTICO' },
-      { src: '../IMG/jpg/camarones.avif', titulo: 'CAMARONES' },
-      { src: '../IMG/jpg/chamorroDeCerdo.avif', titulo: 'CHAMORRO DE CERDO' },
-      { src: '../IMG/jpg/arrachera.avif', titulo: 'ARRACHERA' },
-      { src: '../IMG/jpg/brochetasDeArrachera.avif', titulo: 'BROCHETAS DE ARRACHERA' },
-      { src: '../IMG/jpg/arracheraPinar.avif', titulo: 'ARRACHERA PINAR' },
-      { src: '../IMG/jpg/arracheraAlChipotle.avif', titulo: 'ARRACHERA CON CREMA DE CHIPOTLE' },
-      { src: '../IMG/jpg/sabanaChayan.avif', titulo: 'SABANA CHAYÁN' },
-      { src: '../IMG/jpg/ribEye.avif', titulo: 'RIB EYE' },
-      { src: '../IMG/jpg/conejoAdobado.avif', titulo: 'CONEJO ADOBADO' },
-      { src: '../IMG/jpg/codornizAsada.avif', titulo: 'CODORNIZ ASADA' },
-      { src: '../IMG/jpg/cowboy.avif', titulo: 'COWBOY' },
-      { src: '../IMG/jpg/conejoAlVinoBlanco.avif', titulo: 'CONEJO AL VINO BLANCO' },
-      { src: '../IMG/jpg/vacio.avif', titulo: 'VACÍO' },
+      { src: '../IMG/jpg/platillos/marytierra.avif', titulo: 'MAR Y TIERRA' },
+      { src: '../IMG/jpg/platillos/codornizEnSalsaVerde.avif', titulo: 'CODORNIZ EN SALSA VERDE' },
+      { src: '../IMG/jpg/platillos/camaronEnSalsaRoja.avif', titulo: 'CAMARÓN EN SALSA ROJA' },
+      { src: '../IMG/jpg/platillos/arracheraEnSalsaVerde.avif', titulo: 'ARRACHERA EN SALSA VERDE' },
+      { src: '../IMG/jpg/platillos/polloEnMole.avif', titulo: 'POLLO EN MOLE DULCE ESTILO COLIMA' },
+      { src: '../IMG/jpg/platillos/polloALaCerveza.avif', titulo: 'POLLO A LA CERVEZA' },
+      { src: '../IMG/jpg/platillos/salmonAlCilantro.avif', titulo: 'SALMÓN CON CREMA DE CILANTRO' },
+      { src: '../IMG/jpg/platillos/pechugaAlCilantro.avif', titulo: 'PECHUGA CON CREMA DE CILANTRO' },
+      { src: '../IMG/jpg/platillos/salmonAgridulce.avif', titulo: 'SALMÓN EN SALSA AGRIDULCE ESTILO ASIÁTICO' },
+      { src: '../IMG/jpg/platillos/camarones.avif', titulo: 'CAMARONES' },
+      { src: '../IMG/jpg/platillos/chamorroDeCerdo.avif', titulo: 'CHAMORRO DE CERDO' },
+      { src: '../IMG/jpg/platillos/arrachera.avif', titulo: 'ARRACHERA' },
+      { src: '../IMG/jpg/platillos/brochetasDeArrachera.avif', titulo: 'BROCHETAS DE ARRACHERA' },
+      { src: '../IMG/jpg/platillos/arracheraPinar.avif', titulo: 'ARRACHERA PINAR' },
+      { src: '../IMG/jpg/platillos/arracheraAlChipotle.avif', titulo: 'ARRACHERA CON CREMA DE CHIPOTLE' },
+      { src: '../IMG/jpg/platillos/sabanaChayan.avif', titulo: 'SABANA CHAYÁN' },
+      { src: '../IMG/jpg/platillos/ribEye.avif', titulo: 'RIB EYE' },
+      { src: '../IMG/jpg/platillos/conejoAdobado.avif', titulo: 'CONEJO ADOBADO' },
+      { src: '../IMG/jpg/platillos/codornizAsada.avif', titulo: 'CODORNIZ ASADA' },
+      { src: '../IMG/jpg/platillos/cowboy.avif', titulo: 'COWBOY' },
+      { src: '../IMG/jpg/platillos/conejoAlVinoBlanco.avif', titulo: 'CONEJO AL VINO BLANCO' },
+      { src: '../IMG/jpg/platillos/vacio.avif', titulo: 'VACÍO' },
 
     ]
   },
@@ -134,12 +149,12 @@ sopas: {
 
     ],
     imagenes: [
-      { src: '../IMG/jpg/payDeNuez.avif', titulo: 'PAY DE NUEZ' },
-      { src: '../IMG/jpg/tartaletaDeGuayaba.avif', titulo: 'TARTALETA DE GUAYABA' },
-      { src: '../IMG/jpg/payDeManzana.avif', titulo: 'PAY DE MANZANA' },
-      { src: '../IMG/jpg/payDeCoco.avif', titulo: 'PAY DE COCO' },
-      { src: '../IMG/jpg/panDeElote.avif', titulo: 'PAN DE ELOTE' },
-      { src: '../IMG/jpg/pastelDeTresLeches.avif', titulo: 'PASTEL DE TRES LECHES' },
+      { src: '../IMG/jpg/platillos/payDeNuez.avif', titulo: 'PAY DE NUEZ' },
+      { src: '../IMG/jpg/platillos/tartaletaDeGuayaba.avif', titulo: 'TARTALETA DE GUAYABA' },
+      { src: '../IMG/jpg/platillos/payDeManzana.avif', titulo: 'PAY DE MANZANA' },
+      { src: '../IMG/jpg/platillos/payDeCoco.avif', titulo: 'PAY DE COCO' },
+      { src: '../IMG/jpg/platillos/panDeElote.avif', titulo: 'PAN DE ELOTE' },
+      { src: '../IMG/jpg/platillos/pastelDeTresLeches.avif', titulo: 'PASTEL DE TRES LECHES' },
 
     ]
   }
@@ -189,31 +204,41 @@ function renderMenu(tipo, button = null) {
   const container = document.getElementById('menuContent');
   container.innerHTML = `
     <div class="col-md-6">
-      ${data.items.map(item => `
-        <div class="mb-3">
-          <div class="d-flex justify-content-between">
-            <strong>${wrapText(item.nombre, 25)}</strong>
-            <span>$${item.precio}</span>
+      ${data.items.map(item => {
+        if (item.tipo === 'titulo') {
+          return `<h5>${item.texto}</h5>`;
+        } else if (item.tipo === 'espacio') {
+          return `<br>`;
+        } else if (item.tipo === 'nota') {
+           return `<small class="d-block fw-bold mb-3">${wrapText(item.texto, 45)}</small>`;
+        }
+        return `
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <strong>${wrapText(item.nombre, 25)}</strong>
+              <span>$${item.precio}</span>
+            </div>
+            ${item.descripcion ? `<small class="text-muted d-block">${wrapText(item.descripcion, 33)}</small>` : ''}
           </div>
-          ${item.descripcion ? `<small class="text-muted d-block">${wrapText(item.descripcion, 33)}</small>` : ''}
-        </div>
-      `).join('')}
+        `;
+      }).join('')}
     </div>
 
     <div class="col-md-6">
       <div class="row row-cols-2 g-2">
         ${data.imagenes.map(img => `
           <div class="col text-center">
-          <p class="titulo-imagen d-flex align-items-end justify-content-center text-center">
-            <span>${wrapTextBackwards(img.titulo, 24)}</span>
-          </p>
-          <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
+            <p class="titulo-imagen">
+              <span>${wrapTextBackwards(img.titulo, 24)}</span>
+            </p>
+            <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
           </div>
         `).join('')}
       </div>
     </div>
   `;
 }
+
 
 // Mostrar menú por defecto al cargar
 document.addEventListener('DOMContentLoaded', () => renderMenu('entradas'));

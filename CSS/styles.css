@@ -6,6 +6,10 @@
     --verBg:#2A4123;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .title{
     background-color: var(--nar);
     padding-top: 30px;
@@ -238,13 +242,26 @@
     width: 25%;
 }
 
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--verBg);
-    height: 100px;
+.footer {
+  display: flex;
+  justify-content: center;  /* horizontal */
+  align-items: center;      /* vertical ✅ */
+  background-color: var(--verBg);
+  height: 85px;
 }
+
+.footer-text {
+  color:var(--bgGris);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0;                /* elimina márgenes por defecto */
+}
+
+.copy{
+  margin: 0;
+}
+
+
 
 
 @media (max-width: 768px) {
@@ -296,10 +313,15 @@
 #menuContent {
   padding-left: 1rem;
   padding-right: 1rem;
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #menuContent strong {
-  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 1200;
+  font-size: 1.2rem;
   line-height: 1.2;
 }
 
@@ -310,9 +332,15 @@
   padding: 0.5rem 0;
 }
 
+#menuContent .d-flex span {
+  padding-right: 1.5rem; /* o más si querés más separación */
+}
+
 #menuContent span {
+    font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   font-weight: bold;
-  font-size: 1.3rem
+  font-size: 1.2rem
 }
 
 #menuContent small {
@@ -333,6 +361,23 @@
   line-height: 1.1;
   margin-top: -4px;
 }
+
+#menuContent h5 {
+  color: var(--nar);         /* Usa el color naranja definido en tus variables */
+  font-size: 1.5rem;         /* Más grande que el texto normal */
+  font-weight: 900;          /* Bien marcado */
+  margin-top: 1.5rem;        /* Separación superior */
+  margin-bottom: 0.75rem;    /* Separación inferior */
+  border-bottom: 2px solid var(--nar); /* Línea decorativa */
+  padding-bottom: 0.25rem;   /* Espacio entre texto y línea */
+  font-family: 'Montserrat', sans-serif; /* Alineado con tu estilo general */
+}
+
+#menuContent .row-cols-2 .col:nth-child(1),
+#menuContent .row-cols-2 .col:nth-child(2) {
+  margin-top: 3rem; /* Ajusta este valor según el espacio deseado */
+}
+
 
   .nav-tabs{
     height: fit-content;
@@ -366,6 +411,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #menuTabs .nav-item {
@@ -422,27 +469,85 @@
 }
 
 .titulo-imagen {
-  min-height: 2.5em;
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin-bottom: 0.25rem;
+  align-items: center;
   height: 2.5em;
-  /* elimina esto ↓ */
-  /* line-height: .2em; */
+  margin-bottom: 0.25rem;
+  text-align: center;
+  padding: 0 0.5rem;
 }
 
-
 .titulo-imagen span {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  text-align: center;
   display: inline-block;
-  width: 100%;
-  font-size: 1px; /* ↓ más pequeño que 0.75rem */
-  line-height: 1.1;
+  width: auto;
+  max-width: 100%;
 }
 
 #menuContent .titulo-imagen span {
   font-size: 0.8rem !important;
   line-height: 1;
+}
+
+.menuContainer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+/* Texto general de la barra */
+.info-text {
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+/* Íconos grandes y bien alineados */
+.bannerInfo i {
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajustes de íconos sociales */
+.bannerInfo .fab {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.bannerInfo a {
+  text-decoration: none !important;
+}
+
+.btn-contacto {
+  background-color: var(--nar);
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow: none;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-contacto:hover {
+  background-color: var(--verBtn);
+  color: white;
+}
+
+.servicios{
+  margin-bottom: 3rem;
+}
+
+.bannerInfo .container {
+  row-gap: 0.5rem; /* más compacto entre filas */
+  column-gap: 1rem; /* opcional */
 }
 
 @media (max-width: 768px) {
@@ -478,6 +583,51 @@
     .container.d-flex.justify-content-start.mb-3.px-4 {
     justify-content: center !important;
   }
+
+  .bannerInfo .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .bannerInfo .container > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .bannerInfo .container > div i {
+    margin-bottom: 0.4rem;
+    height: auto !important; /* que no limite la altura */
+    width: auto;
+  }
+
+  .bannerInfo .container > div:last-child {
+  flex-direction: row !important;
+  gap: 1rem;
+  justify-content: center !important;
 }
+
+.bannerInfo .container > div:last-child a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicios{
+    padding: 1rem !important;
+  }
+  
+}
+
+.container-980 {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 
 
