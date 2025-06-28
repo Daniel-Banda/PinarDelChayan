@@ -1,35 +1,40 @@
 const menuData = {
-  entradas: {
+  destilados: {
     items: [
-      { nombre: 'GUACAMOLE', precio: 105 },
-      { nombre: 'QUESO FUNDIDO', precio: 135 },
-      { nombre: 'QUESO FUNDIDO MIXTO', precio: 145, descripcion: 'Con champiñones, chorizo, tocino o rajas' },
-      { nombre: 'QUESADILLAS', precio: 85 },
-      { nombre: 'PANELA HORNEADA', precio: 145, descripcion: 'A la fina hierba' },
-      { nombre: 'CHISTORRA', precio: 135 },
-      { nombre: 'CECINA (200grs)', precio: 235 },
-      { nombre: 'MANITAS DE CERDO', precio: 95, descripcion: 'Cocidas con salsa mexicana' },
-      { nombre: 'JALAPEÑOS DON CÁSTULO', precio: 99, descripcion: 'Rellenos de queso crema y envueltos en tocino' },
-      { nombre: 'CHILES DON POLO', precio: 105, descripcion: 'Chiles güeros rellenos de queso de cabra, ceniza de chile guajillo y nueces' },
-      { nombre: 'TACOS DE CABEZA', precio: 89 },
-      { nombre: 'TACOS DE FRIJOLES', precio: 69, descripcion: 'A las brasas (4 pzas.)' },
-      { nombre: 'CHAMPIÑONES', precio: 125, descripcion: 'Frescos, al ajo o al ajillo' },
-      { nombre: 'NOPALES GRATINADOS', precio: 90 },
-      { nombre: 'NOPALES EN 3 SALSAS', precio: 88, descripcion: 'Chipotle, cilantro y huitlacoche' },
+      { tipo: 'titulo', texto: 'TEQUILA' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+          
+      { tipo: 'titulo', texto: 'VODKA' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+      
+      { tipo: 'titulo', texto: 'GINEBRA' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+
+      { tipo: 'titulo', texto: 'COGNAC' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+        
+      { tipo: 'titulo', texto: 'BRANDY' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+        
+      { tipo: 'titulo', texto: 'MEZCAL' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+        
+      { tipo: 'titulo', texto: 'RAICILLA' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+        
+      { tipo: 'titulo', texto: 'RON' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+        
+      { tipo: 'titulo', texto: 'WHISKY' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
+        
 
     ],
     imagenes: [
-      { src: '../IMG/jpg/platillos/guacamole.avif', titulo: 'GUACAMOLE' },
-      { src: '../IMG/jpg/platillos/quesoFundido.avif', titulo: 'QUESO FUNDIDO MIXTO' },
-      { src: '../IMG/jpg/platillos/panelaHorneada.avif', titulo: 'PANELA HORNEADA' },
-      { src: '../IMG/jpg/platillos/cecina.avif', titulo: 'CECINA' },
-      { src: '../IMG/jpg/platillos/chistorra.avif', titulo: 'CHISTORRA' },
-      { src: '../IMG/jpg/platillos/jalapenosDonCastulo.avif', titulo: 'JALAPEÑOS DON CÁSTULO' },
-      { src: '../IMG/jpg/platillos/chilesDonPolo.avif', titulo: 'CHILES DON POLO' },
-      { src: '../IMG/jpg/platillos/champinones.avif', titulo: 'CHAMPIÑONES' },
+      { src: '../IMG/jpg/bebidas/', titulo: '' },
     ]
   },
-sopas: {
+cerveza: {
     items: [
       { tipo: 'titulo', texto: 'SOPAS' },
       { nombre: "CREMA DE CHAMPIÑONES FRESCOS", precio: 95 },
@@ -52,7 +57,7 @@ sopas: {
       { src: '../IMG/jpg/platillos/ensaladaDeLaCampina.avif', titulo: 'ENSALADA DE LA CAMPIÑA' },
     ]
   },
-  carnes: {
+  cocteleria: {
     items: [
       { tipo: 'titulo', texto: 'MOLCAJETES' },
       { nombre: "CODORNIZ EN SALSA VERDE", precio: 215, descripcion: '(3 PIEZAS)' },
@@ -66,9 +71,9 @@ sopas: {
       { nombre: 'POLLO A LA CERVEZA', precio: 185, descripcion: 'Pierna y muslo en salsa cremosa de cerveza y naranja' },
       { nombre: 'PECHUGA A LAS FINAS HIERVAS', precio: 179, descripcion: '300 grs.' },
       { nombre: 'PECHUGA CON CREMA', precio: 185, descripcion: 'CHIPOTLE, CILANTRO O HUITLACOCHE (300 grs.)' },
-      { nombre: 'SALMÓN A LAS FINAS HIERBAS ', precio: 310, descripcion: '300 grs.' },
-      { nombre: 'SALMÓN CON CREMA DE CILANTRO', precio: 315, descripcion: '300 grs.' },
-      { nombre: 'SALMÓN EN SALSA AGRIDULCE ESTILO ASIÁTICO', precio: 320, descripcion: '300 grs. Con miel de abeja, soya, limón, naranja, jengibre y especias asiáticas' },
+      { nombre: 'SALMÓN A LAS FINAS HIERBAS ', precio: 310, descripcion: '250 grs.' },
+      { nombre: 'SALMÓN CON CREMA DE CILANTRO', precio: 315, descripcion: '250 grs.' },
+      { nombre: 'SALMÓN EN SALSA AGRIDULCE ESTILO ASIÁTICO', precio: 320, descripcion: '250 grs. Con miel de abeja, soya, limón, naranja, jengibre y especias asiáticas' },
       { nombre: 'CAMARONES', precio: 335, descripcion: '280 grs. Al ajo, ajillo, diabla o media diabla' },
       
       { tipo: 'espacio' },
@@ -131,10 +136,37 @@ sopas: {
 
     ]
   },
-  postres: {
+  aperitivos: {
     items: [
       { nombre: "JERICALLA", precio: 59 },
       { nombre: "TARTA DE REQUESÓN", precio: 85 },
+      { nombre: 'TARTA DE NUEZ', precio: 87, },
+      { nombre: 'TARTA DE COCO', precio: 85, },
+      { nombre: 'TARTA DE MANZANA', precio: 85, },
+      { nombre: 'TARTALETA DE GUAYABA', precio: 87, },
+      { nombre: 'TARTA LILA ARROZ', precio: 89, descripcion: 'A la Vainilla relleno de duraznos y cubierto de almendras' },
+      { nombre: 'FLAN NAPOLITANO', precio: 78, },
+      { nombre: 'PAN DE ELOTE', precio: 78, },
+      { nombre: 'PASTEL DE TRES LECHES', precio: 89, },
+      { nombre: 'PASTEL DE CHOCOLATE O ZANAHORIA', precio: 85, },
+      { nombre: 'CHONGOS ESTILO ZAMORANO', precio: 75, descripcion: 'Hechos en casa' },
+      { nombre: 'HELADOS BELLAGIO', precio: 88, descripcion: 'Coco, Elote, Chocolate, Galleta Oreo, Vainilla con Chocolate o Vainilla con Fresa' },
+
+    ],
+    imagenes: [
+      { src: '../IMG/jpg/platillos/payDeNuez.avif', titulo: 'PAY DE NUEZ' },
+      { src: '../IMG/jpg/platillos/tartaletaDeGuayaba.avif', titulo: 'TARTALETA DE GUAYABA' },
+      { src: '../IMG/jpg/platillos/payDeManzana.avif', titulo: 'PAY DE MANZANA' },
+      { src: '../IMG/jpg/platillos/payDeCoco.avif', titulo: 'PAY DE COCO' },
+      { src: '../IMG/jpg/platillos/panDeElote.avif', titulo: 'PAN DE ELOTE' },
+      { src: '../IMG/jpg/platillos/pastelDeTresLeches.avif', titulo: 'PASTEL DE TRES LECHES' },
+
+    ]
+  },
+  vino: {
+    items: [
+      { tipo: 'titulo', texto: 'TEQUILA' },
+        { nombre: 'DON JULIO 70', copa: 50, bot: 105, descripcion: '750 ml' },
       { nombre: 'TARTA DE NUEZ', precio: 87, },
       { nombre: 'TARTA DE COCO', precio: 85, },
       { nombre: 'TARTA DE MANZANA', precio: 85, },
@@ -202,16 +234,42 @@ function renderMenu(tipo, button = null) {
 
   const data = menuData[tipo];
   const container = document.getElementById('menuContent');
+
   container.innerHTML = `
     <div class="col-md-6">
       ${data.items.map(item => {
-        if (item.tipo === 'titulo') {
-          return `<h5>${item.texto}</h5>`;
-        } else if (item.tipo === 'espacio') {
+if (item.tipo === 'titulo') {
+  return `
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--nar); padding-bottom: 4px; margin-bottom: 12px; margin-right:10px;">
+      <h5 style="margin: 0; text-decoration: none; border: 0; outline: 0; box-shadow: none;">${item.texto}</h5>
+      ${['destilados', 'vino'].includes(tipo) ? `
+        <div style="display: flex; gap: 24px; font-size: 0.7rem; font-weight: 500;">
+          <span style="font-size: 0.9rem !important;">COPA</span>
+          <span style="font-size: 0.9rem !important;">BOT</span>
+        </div>` : ''}
+    </div>
+  `;
+} else if (item.tipo === 'espacio') {
           return `<br>`;
         } else if (item.tipo === 'nota') {
-           return `<small class="d-block fw-bold mb-3">${wrapText(item.texto, 45)}</small>`;
+          return `<small class="d-block fw-bold mb-3">${wrapText(item.texto, 45)}</small>`;
         }
+
+        // Items con copa y bot
+        if (item.copa !== undefined && item.bot !== undefined) {
+          return `
+            <div class="mb-3">
+              <div class="d-flex justify-content-between">
+                <strong style="flex: 1;">${wrapText(item.nombre, 25)}</strong>
+                <span style="width: 50px; text-align: right;">$${item.copa}</span>
+                <span style="width: 50px; text-align: right;">$${item.bot}</span>
+              </div>
+              ${item.descripcion ? `<small class="text-muted d-block">${wrapText(item.descripcion, 33)}</small>` : ''}
+            </div>
+          `;
+        }
+
+        // Items con solo precio
         return `
           <div class="mb-3">
             <div class="d-flex justify-content-between">
@@ -238,6 +296,7 @@ function renderMenu(tipo, button = null) {
     </div>
   `;
 }
+
 
 
 // Mostrar menú por defecto al cargar
