@@ -447,17 +447,23 @@ function renderMenu(tipo) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const pageName = window.location.pathname.split('/').pop().toLowerCase();
+  const pathname = window.location.pathname.toLowerCase();
 
   const pageToMenuMap = {
-    'platillos.html': 'entradas',
-    'bebidas.html': 'destilados',
-    'index.html': 'entradas'
+    '/platillos': 'entradas',
+    '/platillos.html': 'entradas',
+    '/bebidas': 'destilados',
+    '/bebidas.html': 'destilados',
+    '/': 'entradas',
+    '/index': 'entradas',
+    '/index.html': 'entradas'
   };
 
-  const menuCategory = pageToMenuMap[pageName];
-
-  if (menuCategory) {
-    renderMenu(menuCategory);
+  // Buscar la clave más parecida en la ruta
+  for (const path in pageToMenuMap) {
+    if (pathname.endsWith(path)) {
+      renderMenu(pageToMenuMap[path]);
+      break;
+    }
   }
 });
