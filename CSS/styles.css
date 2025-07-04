@@ -957,3 +957,23 @@ form textarea {
   width: 100%;
   font-size: 1rem;
 }
+
+ .btn-cotiza-evento {
+    background-color: var(--nar) !important;
+    color: var(--bg)!important;
+    border-radius: 8px !important;
+    padding: 0.75rem 2rem !important;
+    font-weight: 700 !important;
+    transition: background-color 0.3s ease !important;
+  }
+  .btn-cotiza-evento:hover {
+    background-color: var(--verBtn) !important;
+    color: var(--bg) !important;
+  }
+
+  .carousel-control-prev-text,
+.carousel-control-next-text {
+  color: var(--nar);
+  font-size: 2.5rem;
+  font-weight: bold;
+}

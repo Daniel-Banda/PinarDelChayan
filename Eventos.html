@@ -15,38 +15,74 @@
   <div id="navContainer" class="position-absolute top-50 start-50 translate-middle text-center"></div>
 </section>
 
-  <!-- SECCIÓN 1: Convencer -->
-  <section class="py-5 container text-center">
-    <h2 class="fw-bold mb-4" style="color: var(--nar);">Organiza un evento inolvidable</h2>
-    <p class="lead mb-4">
-      ¿Buscas un lugar mágico, rodeado de naturaleza, con comida deliciosa y un ambiente único?<br>
-      En <strong>Pinar del Chayán</strong> hacemos realidad cualquier celebración: cumpleaños, bodas, bautizos, aniversarios, eventos empresariales y más.
-    </p>
-    <p class="mb-4">
-      Contamos con un espacio amplio al aire libre, zona techada, estacionamiento, sanitarios, mobiliario, iluminación y un equipo listo para ayudarte a planearlo todo.
-    </p>
-    <a href="#cotizacion" class="btn btn-eventos btn-lg">Cotiza tu evento</a>
-  </section>
+<!-- SECCIÓN 1: Convencer -->
+<section class="py-5 container">
+  <h2 class="fw-bold mb-5 text-center" style="color: var(--nar);">Haz de tu evento un recuerdo inolvidable</h2>
+  <div class="row align-items-center g-0">
+    <div class="col-md-1 text-center">
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="./IMG/jpg/eventos.webp" alt="Evento destacado" class="img-fluid rounded shadow" style="object-fit: cover; width: 100%; max-width: 300px;">
+    </div>
+    <div class="col-md-6 text-start">
+      <p class="lead mb-3">Imagina celebrar rodeado de naturaleza, buena vibra, deliciosa comida y todo perfectamente planeado.</p>
+      <p class="mb-3"><strong>Pinar del Chayán</strong> lo hace posible: cumpleaños, bodas, bautizos, aniversarios o reuniones empresariales. Aquí todo se vive diferente.</p>
+      <p>Espacios al aire libre, zona techada, mobiliario, iluminación cálida, estacionamiento, sanitarios y un equipo que te acompaña en cada detalle.</p>
+    </div>
+  </div>
+  <br>
+  <div class="text-center mt-4">
+    <a href="https://wa.me/5213121140402" class="btn btn-lg btn-cotiza-evento" target="_blank" rel="noopener">Cotiza tu evento</a>
+  </div>
+</section>
 
-  <!-- SECCIÓN 2: Galería -->
-  <section class="py-5 bg-light">
-    <div class="container text-center">
-      <h3 class="fw-bold mb-4" style="color: var(--nar);">Galería de Eventos</h3>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <img src="./IMG/jpg/evento1.webp" class="img-fluid rounded shadow" alt="Evento 1">
+
+
+<!-- NUEVA SECCIÓN: Carrusel de galería multimedia -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-4" style="color: var(--nar);">Galería de Eventos</h3>
+
+    <!-- Carrusel principal -->
+    <div id="galleryCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./IMG/jpg/galeria/evento1.webp" class="d-block w-100 rounded shadow" alt="Evento 1">
         </div>
-        <div class="col-md-4">
-          <img src="./IMG/jpg/evento2.webp" class="img-fluid rounded shadow" alt="Evento 2">
+        <div class="carousel-item">
+          <video class="d-block w-100 rounded shadow" controls>
+            <source src="./VID/evento2.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
         </div>
-        <div class="col-md-4">
-          <img src="./IMG/jpg/evento3.webp" class="img-fluid rounded shadow" alt="Evento 3">
+        <div class="carousel-item">
+          <img src="./IMG/jpg/galeria/evento2.jpg" class="d-block w-100 rounded shadow" alt="Evento 3">
         </div>
       </div>
+<!-- Flechas del carrusel -->
+<button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-text" aria-hidden="true">&lt;</span>
+  <span class="visually-hidden">Anterior</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-text" aria-hidden="true">&gt;</span>
+  <span class="visually-hidden">Siguiente</span>
+</button>
+
     </div>
 
+    <!-- Miniaturas (navegación) -->
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <img src="./IMG/jpg/galeria/evento1.webp" class="thumbnail rounded shadow" width="100" data-bs-target="#galleryCarousel" data-bs-slide-to="0" style="cursor: pointer;">
+      <video class="thumbnail rounded shadow" width="100" data-bs-target="#galleryCarousel" data-bs-slide-to="1" style="cursor: pointer;">
+        <source src="./VID/evento2.mp4" type="video/mp4">
+      </video>
+      <img src="./IMG/jpg/evento3.webp" class="thumbnail rounded shadow" width="100" data-bs-target="#galleryCarousel" data-bs-slide-to="2" style="cursor: pointer;">
+    </div>
+  </div>
+</section>
 
-<!-- SECCIÓN 3: Formulario de cotización -->
+<!-- SECCIÓN 3: Formulario de cotización
 <section class="form-wrapper">
   <form id="eventoForm" class="formulario-evento">
     <div class="mb-3">
@@ -63,7 +99,7 @@
     </div>
     <button type="button" id="btnEnviar" class="btn btn-evento-wpp" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
   </form>
-</section>
+</section> -->
 
 
     <div id="footerContainer"></div>
