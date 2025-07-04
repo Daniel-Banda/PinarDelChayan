@@ -171,39 +171,47 @@ const menuData = {
       { nombre: 'Gran Centenario Reposado', copa: 115, bot: 1265, descripcion: '(700 ml)' },
       { nombre: 'Maestro Dobel Cristalino', copa: 185, bot: 2220, descripcion: '(750 ml)' },
 
+      { tipo: 'espacio' },
       { tipo: 'titulo', texto: 'VODKA' },
       { nombre: 'Smirnoff', copa: 79, bot: 948, descripcion: '(750 ml)' },
       { nombre: 'Absolut Azul', copa: 128, bot: 1536, descripcion: '(750 ml)' },
       { nombre: 'Vodka Stolichnaya', copa: 125, bot: 1502, descripcion: '(750 ml)' },
 
+      { tipo: 'espacio' },
       { tipo: 'titulo', texto: 'GINEBRA' },
       { nombre: 'Tanqueray', copa: 110, bot: 1320, descripcion: '(750 ml)' },
       { nombre: "Hendrick's", copa: 155, bot: 1860, descripcion: '(750 ml)' },
 
+      { tipo: 'espacio' },
       { tipo: 'titulo', texto: 'COGNAC' },
       { nombre: 'V.S.O.P Hennessy', copa: 265, bot: 2915, descripcion: '(700 ml)' },
       { nombre: 'V.S.O.P Martell', copa: 180, bot: 1980, descripcion: '(700 ml)' },
 
+      { tipo: 'espacio' },
       { tipo: 'titulo', texto: 'BRANDY' },
       { nombre: 'Azteca De Oro', copa: 75, bot: 825, descripcion: '(700 ml)' },
       { nombre: 'Torres 10', copa: 102, bot: 1122, descripcion: '(700 ml)' },
 
+      { tipo: 'espacio' },
       { tipo: 'titulo', texto: 'MEZCAL' },
       { nombre: '400 Conejos', copa: 125, bot: 1502, descripcion: '(750 ml). Agave Espadín' },
       { nombre: 'Creyente Joven', copa: 135, bot: 1620, descripcion: '(750 ml). Agave Espadín' },
       { nombre: 'Don Fede 70', copa: 115, bot: 1380, descripcion: '(750 ml). Agave Ixtero Amarillo o Lineño' },
       { nombre: 'Chacolo', copa: 188, bot: 2256, descripcion: '(750 ml). Agave Ixtero Amarillo' },
 
+      { tipo: 'espacio' },
       { tipo: 'titulo', texto: 'RAICILLA' },
       { nombre: 'Raicilla Tesoro Del Oeste', copa: 195, bot: 2340, descripcion: '(750 ml). Agave Maximiliana. San Sebastián del Oeste, Jalisco' },
       { nombre: 'Raicilla Cielo Azul', copa: 198, bot: 2376, descripcion: '(750 ml). Agave Angustifolia Haw. San Sebastián del Oeste, Jalisco' },
 
+      { tipo: 'espacio' },
       { tipo: 'titulo', texto: 'RON' },
       { nombre: 'Ron Bacardí Blanco', copa: 88, bot: 968, descripcion: '(750 ml)' },
       { nombre: 'Bacardí Solera', copa: 105, bot: 1260, descripcion: '(750 ml)' },
       { nombre: 'Ron Clássico Añejo N°.3', copa: 120, bot: 1320, descripcion: '(750 ml) *Producto Local' },
       { nombre: 'Matusalem 18 Años', copa: 125, bot: 1500, descripcion: '(750 ml)' },
 
+      { tipo: 'espacio' },
       { tipo: 'titulo', texto: 'WHISKY' },
       { nombre: 'Johnnie Walker Red Label', copa: 105, bot: 1155, descripcion: '(700 ml)' },
       { nombre: 'Johnnie Walker Black Label', copa: 190, bot: 2280, descripcion: '(750 ml)' },
@@ -276,23 +284,6 @@ const menuData = {
       { src: '../IMG/jpg/bebidas/', titulo: '' },
     ]
   },
-  aperitivos: {
-    items: [
-      { nombre: 'Licor De Café Kahlúa', precio: 98 },
-      { nombre: 'Licor 43', precio: 105 },
-      { nombre: 'Anís Chinchón (Dulce)', precio: 95 },
-      { nombre: 'Anís Uxore (Seco)', precio: 93 },
-      { nombre: 'Amaretto Disaronno', precio: 103 },
-      { nombre: "Bailey's", precio: 98 },
-      { nombre: 'Frangelico', precio: 93 },
-      { nombre: 'Vacari Nero (Sambuca)', precio: 103 }
-    ],
-
-    imagenes: [
-      { src: '../IMG/jpg/bebidas/', titulo: '' },
-    ]
-  },
-
 
   vino: {
     items: [
@@ -322,6 +313,23 @@ const menuData = {
       { nombre: 'Riunite Lambrusco', bot: 545, descripcion: 'Vino tinto espumoso' }
 
     ],
+    imagenes: [
+      { src: '../IMG/jpg/bebidas/', titulo: '' },
+    ]
+  },
+
+  aperitivos: {
+    items: [
+      { nombre: 'Licor De Café Kahlúa', precio: 98 },
+      { nombre: 'Licor 43', precio: 105 },
+      { nombre: 'Anís Chinchón (Dulce)', precio: 95 },
+      { nombre: 'Anís Uxore (Seco)', precio: 93 },
+      { nombre: 'Amaretto Disaronno', precio: 103 },
+      { nombre: "Bailey's", precio: 98 },
+      { nombre: 'Frangelico', precio: 93 },
+      { nombre: 'Vacari Nero (Sambuca)', precio: 103 }
+    ],
+
     imagenes: [
       { src: '../IMG/jpg/bebidas/', titulo: '' },
     ]
@@ -375,9 +383,16 @@ function renderMenu(tipo) {
     return;
   }
 
-  document.querySelectorAll('#menuTabs .nav-link').forEach(btn => {
+const clickedButton = document.getElementById(`tab-${tipo}`);
+const tabsContainer = clickedButton?.closest('ul');
+
+if (tabsContainer) {
+  tabsContainer.querySelectorAll('.nav-link').forEach(btn => {
     btn.classList.remove('active', 'bg-success', 'text-white');
   });
+  clickedButton.classList.add('active', 'bg-success', 'text-white');
+}
+
 
   const activeButton = document.getElementById(`tab-${tipo}`);
   if (activeButton) {
