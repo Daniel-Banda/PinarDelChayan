@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos Especiales | Pinar del Chayán</title>
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <section class="carousel-container position-relative">
+  <img src="./IMG/jpg/bannerEventos.webp" alt="Banner de Platillos" class="w-100 img-fluid object-fit-cover" style="height: 480px; object-position: center;">
+  <div id="navContainer" class="position-absolute top-50 start-50 translate-middle text-center"></div>
+</section>
+
+  <!-- SECCIÓN 1: Convencer -->
+  <section class="py-5 container text-center">
+    <h2 class="fw-bold mb-4" style="color: var(--nar);">Organiza un evento inolvidable</h2>
+    <p class="lead mb-4">
+      ¿Buscas un lugar mágico, rodeado de naturaleza, con comida deliciosa y un ambiente único?<br>
+      En <strong>Pinar del Chayán</strong> hacemos realidad cualquier celebración: cumpleaños, bodas, bautizos, aniversarios, eventos empresariales y más.
+    </p>
+    <p class="mb-4">
+      Contamos con un espacio amplio al aire libre, zona techada, estacionamiento, sanitarios, mobiliario, iluminación y un equipo listo para ayudarte a planearlo todo.
+    </p>
+    <a href="#cotizacion" class="btn btn-eventos btn-lg">Cotiza tu evento</a>
+  </section>
+
+  <!-- SECCIÓN 2: Galería -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h3 class="fw-bold mb-4" style="color: var(--nar);">Galería de Eventos</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="./IMG/jpg/evento1.webp" class="img-fluid rounded shadow" alt="Evento 1">
+        </div>
+        <div class="col-md-4">
+          <img src="./IMG/jpg/evento2.webp" class="img-fluid rounded shadow" alt="Evento 2">
+        </div>
+        <div class="col-md-4">
+          <img src="./IMG/jpg/evento3.webp" class="img-fluid rounded shadow" alt="Evento 3">
+        </div>
+      </div>
+
+
+<!-- SECCIÓN 3: Formulario de cotización -->
+<section class="form-wrapper">
+  <form id="eventoForm" class="formulario-evento">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+    </div>
+    <button type="button" id="btnEnviar" class="btn btn-evento-wpp" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+  </form>
+</section>
+
+
+    <div id="footerContainer"></div>
+
+  <script src="./JS/nav.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./JS/form.js"> </script>
+</body>
+</html>
