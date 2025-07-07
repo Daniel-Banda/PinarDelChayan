@@ -248,7 +248,7 @@ const menuData = {
       { nombre: 'Piedra Lisa', precio: 79 }
     ],
     imagenes: [
-      { src: '../IMG/jpg/bebidas/', titulo: '' },
+      { src: '../IMG/jpg/bebidas/CervezaArtesanal.avif', titulo: 'Cerveza Artesanal' },
     ]
   },
   cocteleria: {
@@ -281,7 +281,12 @@ const menuData = {
 
     ],
     imagenes: [
-      { src: '../IMG/jpg/bebidas/', titulo: '' },
+      { src: '../IMG/jpg/bebidas/CocoGinebra.avif', titulo: 'Coco con Ginebra' },
+      { src: '../IMG/jpg/bebidas/GinFrutosRojos.avif', titulo: 'Gin and Tonic de Frutos Rojos' },
+      { src: '../IMG/jpg/bebidas/JaliscoMule.avif', titulo: 'Jalisco Mule' },
+      { src: '../IMG/jpg/bebidas/Margarita.avif', titulo: 'Margarita' },
+      { src: '../IMG/jpg/bebidas/Tuba.avif', titulo: 'Tuba' },
+      { src: '../IMG/jpg/bebidas/TejuinoMezcal.avif', titulo: 'Tejuino con Mezcal' },
     ]
   },
 

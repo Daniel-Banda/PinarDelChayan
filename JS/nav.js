@@ -18,16 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Lógica para resaltar la página activa
         const currentPage = window.location.pathname.split('/').pop().toLowerCase();
         const links = menuCont.querySelectorAll('a.nav-link-custom');
-        links.forEach(link => {
-          // Extrae solo el nombre del archivo del atributo href del enlace
-          const linkHref = link.getAttribute('href').split('/').pop().toLowerCase(); 
-          
-          if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
+          links.forEach(link => {
+            const linkHref = link.getAttribute('href').split('/').pop().toLowerCase(); 
+            if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+});
+
       });
   }
 
