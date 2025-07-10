@@ -44,6 +44,7 @@ const menuData = {
     ],
     imagenes: [
       { src: '../IMG/jpg/platillos/sopaAzteca.avif', titulo: 'Sopa Azteca' },
+      { src: '../IMG/jpg/platillos/consome.avif', titulo: 'Consomé de Pollo' },
       { src: '../IMG/jpg/platillos/cremaDeChampinones.avif', titulo: 'Crema De Champiñones' },
       { src: '../IMG/jpg/platillos/ensaladaPinar.avif', titulo: 'Ensalada Pinar' },
       { src: '../IMG/jpg/platillos/ensaladaPrimavera.avif', titulo: 'Ensalada Primavera' },
@@ -248,7 +249,16 @@ const menuData = {
       { nombre: 'Piedra Lisa', precio: 79 }
     ],
     imagenes: [
-      { src: '../IMG/jpg/bebidas/CervezaArtesanal.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/colAma.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/colAqu.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/colBco.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/colDor.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/colRoj.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/colVer.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/Colimita.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/Paramo.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/PiedraLisa.avif', titulo: 'Cerveza Artesanal' },
+      { src: '../IMG/jpg/bebidas/Ticus.avif', titulo: 'Cerveza Artesanal' },
     ]
   },
   cocteleria: {
@@ -315,16 +325,10 @@ const menuData = {
       { nombre: 'Riunite Blanco Espumoso', bot: 545, descripcion: 'Vino blanco espumoso extra seco' },
       { nombre: 'Riunite Rosado', bot: 545, descripcion: 'Vino rosado extra seco' },
       { nombre: 'Riunite Prosecco', bot: 670, descripcion: 'Vino blanco espumoso extra seco' },
-      { nombre: 'Riunite Lambrusco', bot: 545, descripcion: 'Vino tinto espumoso' }
+      { nombre: 'Riunite Lambrusco', bot: 545, descripcion: 'Vino tinto espumoso' },
 
-    ],
-    imagenes: [
-      { src: '../IMG/jpg/bebidas/', titulo: '' },
-    ]
-  },
-
-  aperitivos: {
-    items: [
+      { tipo: 'espacio' },
+      { tipo: 'titulo', texto: 'APERITIVOS Y DIGESTIVOS' },
       { nombre: 'Licor De Café Kahlúa', precio: 98 },
       { nombre: 'Licor 43', precio: 105 },
       { nombre: 'Anís Chinchón (Dulce)', precio: 95 },
@@ -333,12 +337,26 @@ const menuData = {
       { nombre: "Bailey's", precio: 98 },
       { nombre: 'Frangelico', precio: 93 },
       { nombre: 'Vacari Nero (Sambuca)', precio: 103 }
-    ],
 
+    ],
     imagenes: [
-      { src: '../IMG/jpg/bebidas/', titulo: '' },
+      { src: '../IMG/jpg/bebidas/3v.avif', titulo: '' },
+      { src: '../IMG/jpg/bebidas/Catena.avif', titulo: '' },
+      { src: '../IMG/jpg/bebidas/Tablas.avif', titulo: '' },
+      { src: '../IMG/jpg/bebidas/Rioja.avif', titulo: '' },
+      { src: '../IMG/jpg/bebidas/Cinzano.avif', titulo: '' },
     ]
-  }
+  },
+
+  // aperitivos: {
+  //   items: [
+
+  //   ],
+
+  //   imagenes: [
+  //     { src: '../IMG/jpg/bebidas/', titulo: '' },
+  //   ]
+  // }
 };
 
 

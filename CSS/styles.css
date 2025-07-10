@@ -695,7 +695,7 @@ form textarea {
 
 #menuTabsBebidas {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
     width: 100%;
     margin: 0 auto;
@@ -914,6 +914,9 @@ form textarea {
   color: var(--bg);
 }
 
+.admin{
+    font-weight: 600;
+}
 
 @media (max-width: 768px) {
     .top-banner {
