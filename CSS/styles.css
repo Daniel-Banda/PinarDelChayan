@@ -918,6 +918,28 @@ form textarea {
     font-weight: 600;
 }
 
+/* Estilo para columnas de imagen en coctelería */
+.image-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo uniforme para imágenes */
+.uniform-img {
+    width: 100%;
+  max-width: 220px;
+  height: 300px; /* o lo que se ajuste a tu diseño */
+  object-fit: cover;
+  max-width: 220px; /* Ajusta según lo que necesites */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 @media (max-width: 768px) {
     .top-banner {
     background-color: var(--nar);

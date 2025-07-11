@@ -99,17 +99,17 @@ const menuData = {
     { nombre: 'Piedra Lisa', precio: 79 }
   ],
   derecha: [
-    { src: '../IMG/jpg/bebidas/colAma.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/colAqu.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/colBco.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/colDor.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/colRoj.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/colVer.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/Colimita.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/Paramo.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/PiedraLisa.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/Ticus.avif', titulo: 'Cerveza Artesanal' },
-    { src: '../IMG/jpg/bebidas/Cayaco.avif', titulo: 'Cerveza Artesanal' }
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/colAma.avif', titulo: 'Blonde Ale' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/colAqu.avif', titulo: 'Mestiza' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/colBco.avif', titulo: 'Coffee Porter' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/colDor.avif', titulo: 'Forajido' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/colRoj.avif', titulo: 'Pale Ale' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/colVer.avif', titulo: 'Smoked Black IPA' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/Colimita.avif', titulo: 'Colimita' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/Paramo.avif', titulo: 'Páramo' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/PiedraLisa.avif', titulo: 'Piedra Lisa' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/Ticus.avif', titulo: 'Ticús' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/Cayaco.avif', titulo: 'Cayaco' }
   ]
 },
 
@@ -153,52 +153,54 @@ const menuData = {
   },
 
   vino: {
-    items: [
-      { tipo: 'titulo', texto: 'VINO TINTO' },
-      { nombre: 'Concha Y Toro Reservado', copa: 99, bot: 435, descripcion: 'Cabernet Sauvignon. Valle Central, Chile' },
-      { nombre: 'XA Domecq', bot: 890, descripcion: 'Cabernet Sauvignon-Grenache. Valle de Guadalupe, Baja California, México' },
-      { nombre: 'Casa Madero', bot: 890, descripcion: 'Syrah. Valle de Parras, México' },
-      { nombre: '2V Casa Madero', bot: 950, descripcion: 'Cabernet Sauvignon, Merlot. Región Valle de Parras, México' },
-      { nombre: 'Casillero Del Diablo', bot: 860, descripcion: 'Cabernet Sauvignon. Valle Central, Chile' },
-      { nombre: 'AbA De Ramón Del Riscál', bot: 1150, descripcion: 'Rioja. Elciego, España' },
-      { nombre: 'Tablas', bot: 1250, descripcion: 'Tempranillo-Grenache. Valle de Guadalupe, Baja California, México' },
-      { nombre: 'Catena', bot: 860, descripcion: 'Malbec. Mendoza, Argentina' },
+  izquierda: [
+    { tipo: 'titulo', texto: 'VINO TINTO' },
+    { nombre: 'Concha Y Toro Reservado', copa: 99, bot: 435, descripcion: 'Cabernet Sauvignon. Valle Central, Chile' },
+    { nombre: 'XA Domecq', bot: 890, descripcion: 'Cabernet Sauvignon-Grenache. Valle de Guadalupe, Baja California, México' },
+    { nombre: 'Casa Madero', bot: 890, descripcion: 'Syrah. Valle de Parras, México' },
+    { nombre: '2V Casa Madero', bot: 950, descripcion: 'Cabernet Sauvignon, Merlot. Región Valle de Parras, México' },
+    { nombre: 'Casillero Del Diablo', bot: 860, descripcion: 'Cabernet Sauvignon. Valle Central, Chile' },
+    { nombre: 'Aba De Ramón Del Riscál', bot: 1150, descripcion: 'Rioja. Elciego, España' },
+    { nombre: 'Tablas', bot: 1250, descripcion: 'Tempranillo-Grenache. Valle de Guadalupe, Baja California, México' },
+    { nombre: 'Catena', bot: 860, descripcion: 'Malbec. Mendoza, Argentina' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'VINO BLANCO' },
-      { nombre: 'XA Domecq', copa: 87, bot: 435, descripcion: 'Chenin Blanc & Chardonnay. Valle de Guadalupe, Baja California, México' },
-      { nombre: 'Concha Y Toro', copa: 83, bot: 415, descripcion: 'Sauvignon Blanc. Chile' },
-      { nombre: '2V Casa Madero', bot: 720, descripcion: 'Chardonnay. Valle de Parras, México' },
-      { nombre: 'Casillero Del Diablo', bot: 745, descripcion: 'Chardonnay. Chile' },
-      { nombre: 'LA Cetto Blanc De Blancs', bot: 545, descripcion: 'Valle de Guadalupe, México' },
+    { tipo: 'espacio' },
+    { tipo: 'titulo', texto: 'VINO BLANCO' },
+    { nombre: 'XA Domecq', copa: 87, bot: 435, descripcion: 'Chenin Blanc & Chardonnay. Valle de Guadalupe, Baja California, México' },
+    { nombre: 'Concha Y Toro', copa: 83, bot: 415, descripcion: 'Sauvignon Blanc. Chile' },
+    { nombre: '2V Casa Madero', bot: 720, descripcion: 'Chardonnay. Valle de Parras, México' },
+    { nombre: 'Casillero Del Diablo', bot: 745, descripcion: 'Chardonnay. Chile' },
+    { nombre: 'LA Cetto Blanc De Blancs', bot: 545, descripcion: 'Valle de Guadalupe, México' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'VINO ESPUMOSO' },
-      { nombre: 'Riunite Blanco Espumoso', bot: 545, descripcion: 'Vino blanco espumoso extra seco' },
-      { nombre: 'Riunite Rosado', bot: 545, descripcion: 'Vino rosado extra seco' },
-      { nombre: 'Riunite Prosecco', bot: 670, descripcion: 'Vino blanco espumoso extra seco' },
-      { nombre: 'Riunite Lambrusco', bot: 545, descripcion: 'Vino tinto espumoso' },
+    { tipo: 'espacio' },
+    { tipo: 'titulo', texto: 'VINO ESPUMOSO' },
+    { nombre: 'Riunite Blanco Espumoso', precio: 545, descripcion: 'Vino blanco espumoso extra seco' },
+    { nombre: 'Riunite Rosado', precio: 545, descripcion: 'Vino rosado extra seco' },
+    { nombre: 'Riunite Prosecco', precio: 670, descripcion: 'Vino blanco espumoso extra seco' },
+    { nombre: 'Riunite Lambrusco', precio: 545, descripcion: 'Vino tinto espumoso' },
+  ],
+  derecha: [
+    { tipo: 'titulo', texto: 'APERITIVOS Y DIGESTIVOS' },
+    { nombre: 'Licor De Café Kahlúa', precio: 98 },
+    { nombre: 'Licor 43', precio: 105 },
+    { nombre: 'Anís Chinchón (Dulce)', precio: 95 },
+    { nombre: 'Anís Uxore (Seco)', precio: 93 },
+    { nombre: 'Amaretto Disaronno', precio: 103 },
+    { nombre: "Bailey's", precio: 98 },
+    { nombre: 'Frangelico', precio: 93 },
+    { nombre: 'Vacari Nero (Sambuca)', precio: 103 },
+    { tipo: 'espacio' },
+    { tipo: 'espacio' },
+  
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'APERITIVOS Y DIGESTIVOS' },
-      { nombre: 'Licor De Café Kahlúa', precio: 98 },
-      { nombre: 'Licor 43', precio: 105 },
-      { nombre: 'Anís Chinchón (Dulce)', precio: 95 },
-      { nombre: 'Anís Uxore (Seco)', precio: 93 },
-      { nombre: 'Amaretto Disaronno', precio: 103 },
-      { nombre: "Bailey's", precio: 98 },
-      { nombre: 'Frangelico', precio: 93 },
-      { nombre: 'Vacari Nero (Sambuca)', precio: 103 }
-
-    ],
-    imagenes: [
-      { src: '../IMG/jpg/bebidas/3v.avif', titulo: '' },
-      { src: '../IMG/jpg/bebidas/Catena.avif', titulo: '' },
-      { src: '../IMG/jpg/bebidas/Tablas.avif', titulo: '' },
-      { src: '../IMG/jpg/bebidas/Rioja.avif', titulo: '' },
-      { src: '../IMG/jpg/bebidas/Cinzano.avif', titulo: '' },
-    ]
-  },
+    // Puedes poner las imágenes aquí también para que aparezcan en la misma columna
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/3v.avif', titulo: 'Casa Madero' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/Catena.avif', titulo: 'Catena' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/Tablas.avif', titulo: 'Tablas' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/Rioja.avif', titulo: 'Marqués de Riscal' },
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/Cinzano.avif', titulo: 'Cinzano' },
+  ]
+}
 
   // aperitivos: {
   //   items: [
@@ -252,7 +254,7 @@ function renderMenu(tipo) {
   const data = menuData[tipo];
   if (!data) return;
 
-  // Caso 1: estructura con 'bloques'
+  // Caso 1: estructura con 'bloques' y columnas 'izq' y 'der'
   if (data.bloques) {
     const colIzq = data.bloques.filter(b => b.columna === 'izq');
     const colDer = data.bloques.filter(b => b.columna === 'der');
@@ -265,80 +267,82 @@ function renderMenu(tipo) {
         ${colDer.map(renderBloque).join('')}
       </div>
     `;
+    return;
   }
 
   // Caso 2: estructura con 'izquierda' y 'derecha'
-else if (data.izquierda && data.derecha) {
-  container.innerHTML = `
-    <div class="col-md-6">
-      ${data.izquierda.map(renderBloque).join('')}
-    </div>
-    <div class="col-md-6">
-      <div class="row">
-        ${data.derecha.map(img => `
-          <div class="col-6 text-center mb-3">
-            <p class="titulo-imagen"><span>${wrapTextBackwards(img.titulo, 28)}</span></p>
-            <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
-          </div>
-        `).join('')}
+  if (data.izquierda && data.derecha) {
+    container.innerHTML = `
+      <div class="col-md-6">
+        ${data.izquierda.map(renderBloque).join('')}
       </div>
-    </div>
-  `;
-}
-
-
-  // Caso 3: estructura con 'items' e 'imagenes'
-else if (data.items && data.imagenes) {
-  container.innerHTML = `
-    <div class="col-md-6">
-      ${data.items.map(renderBloque).join('')}
-    </div>
-    <div class="col-md-6">
-      <div class="row">
-        ${data.imagenes.map(img => `
-          <div class="col-6 text-center mb-3">
-            <p class="titulo-imagen"><span>${wrapTextBackwards(img.titulo, 28)}</span></p>
-            <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
-          </div>
-        `).join('')}
+      <div class="col-md-6">
+        <div class="row">
+          ${data.derecha.map(bloque => {
+            if (bloque.tipo === 'imagen') {
+              return `
+                <div class="col-6 text-center mb-3">
+                  <p class="titulo-imagen"><span>${wrapTextBackwards(bloque.titulo || '', 28)}</span></p>
+                  <img src="${bloque.src}" alt="${bloque.titulo || ''}" class="img-fluid rounded shadow-sm">
+                </div>`;
+            }
+            return `
+              <div class="col-12">
+                ${renderBloque(bloque)}
+              </div>`;
+          }).join('')}
+        </div>
       </div>
-    </div>
-  `;
-}
+    `;
+    return;
+  }
 
-  else if (data.items && data.imagenes) {
-  container.innerHTML = `
-    <div class="col-md-6">
-      ${data.items.map(renderBloque).join('')}
-    </div>
-    <div class="col-md-6">
+  // Caso 3: estructura con 'items' e 'imagenes' (por si tienes datos así)
+  if (tipo === 'cocteleria') {
+    container.innerHTML = `
       <div class="row">
-        ${data.imagenes.map(img => `
-          <div class="col-md-6 mb-3 text-center">
-            <p class="titulo-imagen"><span>${wrapTextBackwards(img.titulo, 28)}</span></p>
-            <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
+        <div class="col-md-6">
+          ${data.items.map(renderBloque).join('')}
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-start">
+          <div class="image-column">
+            ${data.imagenes.map(img => `
+              <div class="text-center mb-4">
+                <p class="titulo-imagen"><span>${wrapTextBackwards(img.titulo || '', 20)}</span></p>
+                <img src="${img.src}" alt="${img.titulo || ''}" class="uniform-img">
+              </div>
+            `).join('')}
           </div>
-        `).join('')}
+        </div>
       </div>
-    </div>
-  `;
-}
+    `;
+    return;
+  }
+
 
 
   // Fallback
-  else {
-    container.innerHTML = '<p class="text-danger">Sección no disponible.</p>';
-  }
+  container.innerHTML = '<p class="text-danger">Sección no disponible.</p>';
 }
 
 
+
 function renderBloque(bloque) {
-  if (bloque.tipo === 'titulo') {
-    return `
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--nar); padding-bottom: 4px; margin-bottom: 12px;">
-        <h5 style="margin: 0;">${bloque.texto}</h5>
-      </div>`;
-  }
+if (bloque.tipo === 'titulo') {
+  const categoriasConCopaBot = [
+    'TEQUILA', 'VODKA', 'GINEBRA', 'COGNAC', 'BRANDY', 'MEZCAL', 'RAICILLA', 'RON', 'WHISKY',
+    'VINO TINTO', 'VINO BLANCO'
+  ];
+
+  const mostrarCopaBot = categoriasConCopaBot.includes(bloque.texto.toUpperCase());
+
+  return `
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--nar); padding-bottom: 4px; margin-bottom: 12px;">
+      <h5 style="margin: 0;">${bloque.texto}</h5>
+      ${mostrarCopaBot ? '<small style="font-weight: bold; color: var(--nar); margin-right: 10px;">COPA &nbsp;&nbsp; BOT</small>' : ''}
+    </div>`;
+}
+
 
   if (bloque.tipo === 'espacio') return '<br>';
 
@@ -402,3 +406,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+// Asignar eventos a pestañas después de cargar
+document.addEventListener('DOMContentLoaded', () => {
+  const pathname = window.location.pathname.toLowerCase();
+
+  const pageToMenuMap = {
+    '/platillos': 'entradas',
+    '/platillos.html': 'entradas',
+    '/bebidas': 'destilados',
+    '/bebidas.html': 'destilados',
+    '/': 'entradas',
+    '/index': 'entradas',
+    '/index.html': 'entradas'
+  };
+
+  for (const path in pageToMenuMap) {
+    if (pathname.endsWith(path)) {
+      const tipoActivo = pageToMenuMap[path];
+      renderMenu(tipoActivo);
+      setActiveTab(tipoActivo);
+      break;
+    }
+  }
+
+  // 🔁 Escucha clics en pestañas de bebidas
+  document.querySelectorAll('#menuTabsBebidas .nav-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tipo = btn.dataset.tipo;
+      if (!tipo) return;
+      renderMenu(tipo);
+      setActiveTab(tipo);
+    });
+  });
+});
+
+// ✅ Marca la pestaña activa visualmente
+function setActiveTab(tipo) {
+  document.querySelectorAll('#menuTabsBebidas .nav-link').forEach(btn => {
+    if (btn.dataset.tipo === tipo) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+}
