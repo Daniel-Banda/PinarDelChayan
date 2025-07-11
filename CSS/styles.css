@@ -987,14 +987,18 @@ form textarea {
         padding: 10px;
     }
 
-    .menu-info-section {
-        padding: 20px;
-        margin: 30px 15px;
-    }
+  .menu-info-section {
+    padding: 0;
+    margin: 0;
+    width: 100vw; /* ancho completo viewport */
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
 
-    .menu-info-section .row {
-        padding: 15px;
-    }
+   .menu-info-section .row {
+    margin: 0;
+    width: 100%;
+  }
 
     .section-title {
         font-size: 2.2rem;
@@ -1025,15 +1029,6 @@ form textarea {
         margin-top: 2rem;
         gap: 1.5rem;
         justify-content: center !important;
-    }
-
-    .menu-info-section{
-        margin-top: 0px;
-        padding: 0px;
-    }
-
-    .menu-info-section .text-md-start {
-        text-align: center !important;
     }
 
     .opiniones-section{
@@ -1217,6 +1212,7 @@ form textarea {
 
 
 .mobile-navbar {
+  padding: 10px 10px;
   position: fixed;
   top: 0;
   left: 0;
@@ -1245,3 +1241,118 @@ form textarea {
   z-index: 9998;     /* menos que la barra sticky */
   overflow-y: auto;
 }
+ #mobileNav{
+    padding: 25px 25px;
+ }
+
+ @media (max-width: 768px) {
+  /* Contenedor ul de las tabs */
+  #menuTabs {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0.75rem 1rem; /* espacio vertical y horizontal */
+    padding: 0 1rem; /* margen a los lados */
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  /* Cada tab (li) debe ocupar todo el ancho de la celda */
+  #menuTabs .nav-item {
+    width: 100%;
+  }
+
+  /* Para que el botón dentro ocupe todo el ancho del li */
+  #menuTabs .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+    .btn-bebidas-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem; /* margen lateral para que no quede pegado */
+  }
+
+  .btn-bebidas-container a.btn {
+    width: auto; /* que no ocupe todo el ancho */
+  }
+
+}
+
+@media (max-width: 768px) {
+  /* Tabs 2x2 para móvil con margen lateral */
+  #menuTabsBebidas {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0.75rem 1rem;
+    padding: 0 1rem; /* margen lateral */
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  #menuTabsBebidas .nav-item {
+    width: 100%;
+  }
+
+  #menuTabsBebidas .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Centrar botón "Ver Menú de Platillos" */
+  .btn-bebidas-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem; /* margen lateral para que no quede pegado */
+  }
+
+  .btn-bebidas-container a.btn {
+    width: auto; /* que no ocupe todo el ancho */
+  }
+}
+
+
+/* Justificar el texto y agregar margen/padding lateral */
+.col-md-6.text-start {
+  text-align: justify;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* En desktop, limita el ancho y centra con margen automático */
+@media (min-width: 768px) {
+  .col-md-6.text-start {
+    max-width: 600px; /* o el ancho que prefieras */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Opiniones: 1 por fila en móvil */
+@media (max-width: 767.98px) {
+  .opiniones-section .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .evento img {
+      margin: 0 auto;
+    width: 90vw;        /* ancho 90% */
+    max-width: 90vw;    /* evitar que se pase */
+    height: auto;       /* mantiene proporción */
+    max-height: none;   /* elimina límite para mayor flexibilidad */
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+  }
+}
+

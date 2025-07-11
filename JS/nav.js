@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
           desktopNav.style.position = 'absolute';
 
           if (currentPage === 'index.html') {
-            desktopNav.style.top = '60%';
+            desktopNav.style.top = '65%';
           } else if (currentPage === 'eventos.html') {
-            desktopNav.style.top = '33%';
+            desktopNav.style.top = '35%';
           } else {
             desktopNav.style.top = '10%';
           }
