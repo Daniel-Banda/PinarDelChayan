@@ -1,35 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const menuCont = document.getElementById('navContainer');
-  if (menuCont) {
-    fetch('menu.html')
+  const navContainer = document.getElementById('navContainer');
+  if (navContainer) {
+    fetch('nav.html')
       .then(res => res.text())
       .then(html => {
-        menuCont.innerHTML = html;
+        navContainer.innerHTML = html;
 
-        // Centrado (asegúrate de que estas propiedades no interfieran con tu CSS para el navbar)
-        menuCont.style.position = 'absolute';
-        menuCont.style.top = '50%';
-        menuCont.style.left = '50%';
-        menuCont.style.transform = 'translate(-50%, -50%)';
-        menuCont.style.width = '100%';
-        menuCont.style.textAlign = 'center';
-        menuCont.style.zIndex = '10';
+        const isDesktop = window.innerWidth >= 768;
+        const desktopNav = document.getElementById('desktopNav');
+        const currentPage = window.location.pathname.split('/').pop().toLowerCase() || 'index.html';
 
-        // Lógica para resaltar la página activa
-        const currentPage = window.location.pathname.split('/').pop().toLowerCase();
-        const links = menuCont.querySelectorAll('a.nav-link-custom');
-          links.forEach(link => {
-            const linkHref = link.getAttribute('href').split('/').pop().toLowerCase(); 
-            if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
-              link.classList.add('active');
-            } else {
-              link.classList.remove('active');
-            }
-});
+        // Nav desktop: posición absoluta centrada según página
+        if (isDesktop && desktopNav) {
+          desktopNav.style.position = 'absolute';
 
+          if (currentPage === 'index.html') {
+            desktopNav.style.top = '60%';
+          } else if (currentPage === 'eventos.html') {
+            desktopNav.style.top = '33%';
+          } else {
+            desktopNav.style.top = '10%';
+          }
+
+          desktopNav.style.left = '50%';
+          desktopNav.style.transform = 'translate(-50%, -50%)';
+          desktopNav.style.zIndex = '10';
+          desktopNav.style.width = '100%';
+          desktopNav.style.textAlign = 'center';
+        }
+
+        // Resaltar enlace activo
+        const links = navContainer.querySelectorAll('a.nav-link-custom');
+        links.forEach(link => {
+          const href = link.getAttribute('href').split('/').pop().toLowerCase();
+          if (href === currentPage) {
+            link.classList.add('active');
+          }
+        });
+
+        // Funcionalidad botón hamburguesa móvil
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (hamburgerBtn && mobileMenu) {
+          hamburgerBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            mobileMenu.setAttribute('aria-hidden', !isOpen);
+          });
+        }
       });
   }
 
+  // Cargar footer
   const footerCont = document.getElementById('footerContainer');
   if (footerCont) {
     fetch('footer.html')

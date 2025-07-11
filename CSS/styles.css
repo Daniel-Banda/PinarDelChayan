@@ -774,6 +774,7 @@ form textarea {
 }
 
 .nav-wrapper {
+    padding: 10px;
     background-color: var(--nar);
     border-radius: 40px;
     display: flex;
@@ -1113,4 +1114,134 @@ form textarea {
         height: 220px;
     }
 
+}
+
+
+/* Barra sticky arriba para mobile */
+.mobile-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: var(--nar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 50px;
+}
+
+/* Botón hamburguesa */
+#hamburgerBtn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Contenedor derecha */
+.mobile-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.mobile-logo {
+  height: 30px;
+  width: auto;
+}
+
+/* Menú lateral */
+.mobile-menu {
+  position: fixed;
+  top: 50px; /* justo debajo de la barra sticky */
+  left: -250px; /* oculto por defecto a la izquierda */
+  width: 250px;
+  height: 100vh;
+  background-color: var(--nar);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  transition: left 0.3s ease;
+  z-index: 9998;
+  overflow-y: auto;
+}
+
+/* Menú visible */
+.mobile-menu.open {
+  left: 0;
+}
+
+/* Links del menú */
+.mobile-menu .nav-link-custom {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.mobile-menu .nav-link-custom.active {
+  text-decoration: underline;
+}
+
+/* Ocultar menú desktop para móviles */
+.navbar-custom {
+  display: none !important;
+}
+
+/* Mostrar barra y menú móvil solo en max-width: 768 */
+@media (max-width: 768px) {
+  .mobile-navbar {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #navbarGlobal {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
+}
+
+
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;       /* ancho total viewport */
+  z-index: 9999;
+  background-color: var(--nar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 50px;
+  box-sizing: border-box; /* para que padding no aumente el ancho */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+.mobile-menu {
+  position: fixed;
+  top: 50px;         /* justo debajo de la barra sticky */
+  left: -250px;      /* oculto por defecto */
+  width: 250px;
+  height: 100vh;
+  background-color: var(--nar);
+  transition: left 0.3s ease;
+  z-index: 9998;     /* menos que la barra sticky */
+  overflow-y: auto;
 }
