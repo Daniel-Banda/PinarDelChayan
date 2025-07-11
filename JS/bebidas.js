@@ -1,115 +1,118 @@
 const menuData = {
-    destilados: {
-    items: [
-      { tipo: 'titulo', texto: 'TEQUILA' },
-      { nombre: 'Don Julio 70', copa: 198, bot: 2376, descripcion: '(750 ml)' },
-      { nombre: 'Don Julio Blanco', copa: 135, bot: 1485, descripcion: '(700 ml)' },
-      { nombre: 'Don Julio Reposado', copa: 145, bot: 1595, descripcion: '(700 ml)' },
-      { nombre: 'Pueblo Viejo Añejo', copa: 97, bot: 1164, descripcion: '(750 ml)' },
-      { nombre: 'Antiguo De Herradura', copa: 89, bot: 979, descripcion: '(700 ml)' },
-      { nombre: 'Herradura Añejo', copa: 180, bot: 2160, descripcion: '(750 ml)' },
-      { nombre: 'Tradicional Reposado', copa: 98, bot: 1176, descripcion: '(750 ml)' },
-      { nombre: 'Herradura Blanco', copa: 125, bot: 1375, descripcion: '(700 ml)' },
-      { nombre: '7 Leguas Blanco', copa: 130, bot: 1560, descripcion: '(750 ml)' },
-      { nombre: 'Cuervo 1800 Añejo', copa: 130, bot: 1760, descripcion: '(700 ml)' },
-      { nombre: 'Cuervo 1800 Cristalino', copa: 170, bot: 1870, descripcion: '(700 ml)' },
-      { nombre: 'Gran Centenario Plata', copa: 110, bot: 1210, descripcion: '(700 ml)' },
-      { nombre: 'Gran Centenario Añejo', copa: 120, bot: 1320, descripcion: '(695 ml)' },
-      { nombre: 'Gran Centenario Reposado', copa: 115, bot: 1265, descripcion: '(700 ml)' },
-      { nombre: 'Maestro Dobel Cristalino', copa: 185, bot: 2220, descripcion: '(750 ml)' },
+   destilados: {
+  bloques: [
+    // IZQUIERDA
+    { tipo: 'titulo', texto: 'TEQUILA', columna: 'izq' },
+    { tipo: 'item', nombre: 'Don Julio 70', copa: 198, bot: 2376, descripcion: '(750 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Don Julio Blanco', copa: 135, bot: 1485, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Don Julio Reposado', copa: 145, bot: 1595, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Pueblo Viejo Añejo', copa: 97, bot: 1164, descripcion: '(750 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Antiguo De Herradura', copa: 89, bot: 979, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Herradura Añejo', copa: 180, bot: 2160, descripcion: '(750 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Tradicional Reposado', copa: 98, bot: 1176, descripcion: '(750 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Herradura Blanco', copa: 125, bot: 1375, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: '7 Leguas Blanco', copa: 130, bot: 1560, descripcion: '(750 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Cuervo 1800 Añejo', copa: 130, bot: 1760, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Cuervo 1800 Cristalino', copa: 170, bot: 1870, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Gran Centenario Plata', copa: 110, bot: 1210, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Gran Centenario Añejo', copa: 120, bot: 1320, descripcion: '(695 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Gran Centenario Reposado', copa: 115, bot: 1265, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Maestro Dobel Cristalino', copa: 185, bot: 2220, descripcion: '(750 ml)', columna: 'izq' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'VODKA' },
-      { nombre: 'Smirnoff', copa: 79, bot: 948, descripcion: '(750 ml)' },
-      { nombre: 'Absolut Azul', copa: 128, bot: 1536, descripcion: '(750 ml)' },
-      { nombre: 'Vodka Stolichnaya', copa: 125, bot: 1502, descripcion: '(750 ml)' },
+    { tipo: 'espacio', columna: 'izq' },
+    { tipo: 'titulo', texto: 'VODKA', columna: 'izq' },
+    { tipo: 'item', nombre: 'Smirnoff', copa: 79, bot: 948, descripcion: '(750 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Absolut Azul', copa: 128, bot: 1536, descripcion: '(750 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'Vodka Stolichnaya', copa: 125, bot: 1502, descripcion: '(750 ml)', columna: 'izq' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'GINEBRA' },
-      { nombre: 'Tanqueray', copa: 110, bot: 1320, descripcion: '(750 ml)' },
-      { nombre: "Hendrick's", copa: 155, bot: 1860, descripcion: '(750 ml)' },
+    { tipo: 'espacio', columna: 'izq' },
+    { tipo: 'titulo', texto: 'GINEBRA', columna: 'izq' },
+    { tipo: 'item', nombre: 'Tanqueray', copa: 110, bot: 1320, descripcion: '(750 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: "Hendrick's", copa: 155, bot: 1860, descripcion: '(750 ml)', columna: 'izq' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'COGNAC' },
-      { nombre: 'V.S.O.P Hennessy', copa: 265, bot: 2915, descripcion: '(700 ml)' },
-      { nombre: 'V.S.O.P Martell', copa: 180, bot: 1980, descripcion: '(700 ml)' },
+    { tipo: 'espacio', columna: 'izq' },
+    { tipo: 'titulo', texto: 'COGNAC', columna: 'izq' },
+    { tipo: 'item', nombre: 'V.S.O.P Hennessy', copa: 265, bot: 2915, descripcion: '(700 ml)', columna: 'izq' },
+    { tipo: 'item', nombre: 'V.S.O.P Martell', copa: 180, bot: 1980, descripcion: '(700 ml)', columna: 'izq' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'BRANDY' },
-      { nombre: 'Azteca De Oro', copa: 75, bot: 825, descripcion: '(700 ml)' },
-      { nombre: 'Torres 10', copa: 102, bot: 1122, descripcion: '(700 ml)' },
+    // DERECHA
+    { tipo: 'titulo', texto: 'BRANDY', columna: 'der' },
+    { tipo: 'item', nombre: 'Azteca De Oro', copa: 75, bot: 825, descripcion: '(700 ml)', columna: 'der' },
+    { tipo: 'item', nombre: 'Torres 10', copa: 102, bot: 1122, descripcion: '(700 ml)', columna: 'der' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'MEZCAL' },
-      { nombre: '400 Conejos', copa: 125, bot: 1502, descripcion: '(750 ml). Agave Espadín' },
-      { nombre: 'Creyente Joven', copa: 135, bot: 1620, descripcion: '(750 ml). Agave Espadín' },
-      { nombre: 'Don Fede 70', copa: 115, bot: 1380, descripcion: '(750 ml). Agave Ixtero Amarillo o Lineño' },
-      { nombre: 'Chacolo', copa: 188, bot: 2256, descripcion: '(750 ml). Agave Ixtero Amarillo' },
+    { tipo: 'espacio', columna: 'der' },
+    { tipo: 'titulo', texto: 'MEZCAL', columna: 'der' },
+    { tipo: 'item', nombre: '400 Conejos', copa: 125, bot: 1502, descripcion: '(750 ml). Agave Espadín', columna: 'der' },
+    { tipo: 'item', nombre: 'Creyente Joven', copa: 135, bot: 1620, descripcion: '(750 ml). Agave Espadín', columna: 'der' },
+    { tipo: 'item', nombre: 'Don Fede 70', copa: 115, bot: 1380, descripcion: '(750 ml). Agave Ixtero Amarillo o Lineño', columna: 'der' },
+    { tipo: 'item', nombre: 'Chacolo', copa: 188, bot: 2256, descripcion: '(750 ml). Agave Ixtero Amarillo', columna: 'der' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'RAICILLA' },
-      { nombre: 'Raicilla Tesoro Del Oeste', copa: 195, bot: 2340, descripcion: '(750 ml). Agave Maximiliana. San Sebastián del Oeste, Jalisco' },
-      { nombre: 'Raicilla Cielo Azul', copa: 198, bot: 2376, descripcion: '(750 ml). Agave Angustifolia Haw. San Sebastián del Oeste, Jalisco' },
+    { tipo: 'espacio', columna: 'der' },
+    { tipo: 'titulo', texto: 'RAICILLA', columna: 'der' },
+    { tipo: 'item', nombre: 'Raicilla Tesoro Del Oeste', copa: 195, bot: 2340, descripcion: '(750 ml). Agave Maximiliana. San Sebastián del Oeste, Jalisco', columna: 'der' },
+    { tipo: 'item', nombre: 'Raicilla Cielo Azul', copa: 198, bot: 2376, descripcion: '(750 ml). Agave Angustifolia Haw. San Sebastián del Oeste, Jalisco', columna: 'der' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'RON' },
-      { nombre: 'Ron Bacardí Blanco', copa: 88, bot: 968, descripcion: '(750 ml)' },
-      { nombre: 'Bacardí Solera', copa: 105, bot: 1260, descripcion: '(750 ml)' },
-      { nombre: 'Ron Clássico Añejo N°.3', copa: 120, bot: 1320, descripcion: '(750 ml) *Producto Local' },
-      { nombre: 'Matusalem 18 Años', copa: 125, bot: 1500, descripcion: '(750 ml)' },
+    { tipo: 'espacio', columna: 'der' },
+    { tipo: 'titulo', texto: 'RON', columna: 'der' },
+    { tipo: 'item', nombre: 'Ron Bacardí Blanco', copa: 88, bot: 968, descripcion: '(750 ml)', columna: 'der' },
+    { tipo: 'item', nombre: 'Bacardí Solera', copa: 105, bot: 1260, descripcion: '(750 ml)', columna: 'der' },
+    { tipo: 'item', nombre: 'Ron Clássico Añejo N°.3', copa: 120, bot: 1320, descripcion: '(750 ml) *Producto Local', columna: 'der' },
+    { tipo: 'item', nombre: 'Matusalem 18 Años', copa: 125, bot: 1500, descripcion: '(750 ml)', columna: 'der' },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'WHISKY' },
-      { nombre: 'Johnnie Walker Red Label', copa: 105, bot: 1155, descripcion: '(700 ml)' },
-      { nombre: 'Johnnie Walker Black Label', copa: 190, bot: 2280, descripcion: '(750 ml)' },
-      { nombre: "Buchanan's 12", copa: 160, bot: 1920, descripcion: '(750 ml)' },
-      { nombre: "Buchanan's 18", copa: 298, bot: 3576, descripcion: '(750 ml)' },
-      { nombre: 'Chivas Regal', copa: 185, bot: 2220, descripcion: '(750 ml)' }
-    ],
-    imagenes: [
-      { src: '../IMG/jpg/bebidas/', titulo: '' },
-    ]
+    { tipo: 'espacio', columna: 'der' },
+    { tipo: 'titulo', texto: 'WHISKY', columna: 'der' },
+    { tipo: 'item', nombre: 'Johnnie Walker Red Label', copa: 105, bot: 1155, descripcion: '(700 ml)', columna: 'der' },
+    { tipo: 'item', nombre: 'Johnnie Walker Black Label', copa: 190, bot: 2280, descripcion: '(750 ml)', columna: 'der' },
+    { tipo: 'item', nombre: "Buchanan's 12", copa: 160, bot: 1920, descripcion: '(750 ml)', columna: 'der' },
+    { tipo: 'item', nombre: "Buchanan's 18", copa: 298, bot: 3576, descripcion: '(750 ml)', columna: 'der' },
+    { tipo: 'item', nombre: 'Chivas Regal', copa: 185, bot: 2220, descripcion: '(750 ml)', columna: 'der' },
+
+    // Imagen opcional
+    { tipo: 'imagen', src: '../IMG/jpg/bebidas/', titulo: '', columna: 'der' }
+  ]
+
   },
   cerveza: {
-    items: [
-            { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'INDUSTRIAL' },
-      { nombre: 'Corona, Victoria, Modelo De Bote', precio: 56 },
-      { nombre: 'Modelo Especial, Negra Modelo, Ultra Michelob, Corona Light, Stella Artois', precio: 59 },
-      { nombre: 'Michelada Cerveza, Limón, Sal Y Salsas', precio: 65 },
-      { nombre: 'Chelada Cerveza, Limón Y Sal', precio: 63 },
-      { nombre: 'Michelada Con Clamato', precio: 75 },
+  izquierda: [
+    { tipo: 'espacio' },
+    { tipo: 'titulo', texto: 'INDUSTRIAL' },
+    { nombre: 'Corona, Victoria, Modelo De Bote', precio: 56 },
+    { nombre: 'Modelo Especial, Negra Modelo, Ultra Michelob, Corona Light, Stella Artois', precio: 59 },
+    { nombre: 'Michelada Cerveza, Limón, Sal Y Salsas', precio: 65 },
+    { nombre: 'Chelada Cerveza, Limón Y Sal', precio: 63 },
+    { nombre: 'Michelada Con Clamato', precio: 75 },
 
-      { tipo: 'espacio' },
-      { tipo: 'titulo', texto: 'ARTESANAL' },
-      { nombre: 'Colombo', precio: 79, descripcion: 'Zapotiltíc, Jalisco' },
-      { nombre: 'Mestiza', precio: 79, descripcion: 'Ale con destilado de Agave' },
-      { nombre: 'Forajido', precio: 79, descripcion: 'Coffe Dry Stout' },
-      { nombre: 'Coffee Porter', precio: 79 },
-      { nombre: 'Smoked Black Ipa', precio: 79 },
-      { nombre: 'Blond Ale', precio: 79 },
-      { nombre: 'Pale Ale', precio: 79 },
-      { nombre: 'Irish Red', precio: 79 },
-      { nombre: 'Zapotlense', precio: 79, descripcion: 'Large Clara' },
-      { nombre: 'Colimita', precio: 79 },
-      { nombre: 'Cayaco', precio: 79 },
-      { nombre: 'Ticus', precio: 79 },
-      { nombre: 'Piedra Lisa', precio: 79 }
-    ],
-    imagenes: [
-      { src: '../IMG/jpg/bebidas/colAma.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/colAqu.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/colBco.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/colDor.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/colRoj.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/colVer.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/Colimita.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/Paramo.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/PiedraLisa.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/Ticus.avif', titulo: 'Cerveza Artesanal' },
-      { src: '../IMG/jpg/bebidas/Cayaco.avif', titulo: 'Cerveza Artesanal' },
-    ]
-  },
+    { tipo: 'espacio' },
+    { tipo: 'titulo', texto: 'ARTESANAL' },
+    { nombre: 'Colombo', precio: 79, descripcion: 'Zapotiltíc, Jalisco' },
+    { nombre: 'Mestiza', precio: 79, descripcion: 'Ale con destilado de Agave' },
+    { nombre: 'Forajido', precio: 79, descripcion: 'Coffe Dry Stout' },
+    { nombre: 'Coffee Porter', precio: 79 },
+    { nombre: 'Smoked Black Ipa', precio: 79 },
+    { nombre: 'Blond Ale', precio: 79 },
+    { nombre: 'Pale Ale', precio: 79 },
+    { nombre: 'Irish Red', precio: 79 },
+    { nombre: 'Zapotlense', precio: 79, descripcion: 'Large Clara' },
+    { nombre: 'Colimita', precio: 79 },
+    { nombre: 'Cayaco', precio: 79 },
+    { nombre: 'Ticus', precio: 79 },
+    { nombre: 'Piedra Lisa', precio: 79 }
+  ],
+  derecha: [
+    { src: '../IMG/jpg/bebidas/colAma.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/colAqu.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/colBco.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/colDor.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/colRoj.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/colVer.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/Colimita.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/Paramo.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/PiedraLisa.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/Ticus.avif', titulo: 'Cerveza Artesanal' },
+    { src: '../IMG/jpg/bebidas/Cayaco.avif', titulo: 'Cerveza Artesanal' }
+  ]
+},
+
   cocteleria: {
     items: [
       { tipo: 'nota', texto: '*La coctelería se sirve con licores y destilados de la casa, los cambios por su marca de preferencia aplican iguala al respectivo costo.' },
@@ -244,94 +247,139 @@ function wrapTextBackwards(text, maxCharsPerLine) {
 
 function renderMenu(tipo) {
   const container = document.getElementById('menuContent');
-  if (!container) {
-    console.error('El contenedor #menuContent no fue encontrado.');
-    return;
-  }
+  if (!container) return;
 
   const data = menuData[tipo];
-  if (!data) {
-    console.error(`No se encontraron datos para el tipo de menú: ${tipo}`);
-    return;
+  if (!data) return;
+
+  // Caso 1: estructura con 'bloques'
+  if (data.bloques) {
+    const colIzq = data.bloques.filter(b => b.columna === 'izq');
+    const colDer = data.bloques.filter(b => b.columna === 'der');
+
+    container.innerHTML = `
+      <div class="col-md-6">
+        ${colIzq.map(renderBloque).join('')}
+      </div>
+      <div class="col-md-6">
+        ${colDer.map(renderBloque).join('')}
+      </div>
+    `;
   }
 
-const clickedButton = document.getElementById(`tab-${tipo}`);
-const tabsContainer = clickedButton?.closest('ul');
-
-if (tabsContainer) {
-  tabsContainer.querySelectorAll('.nav-link').forEach(btn => {
-    btn.classList.remove('active', 'bg-success', 'text-white');
-  });
-  clickedButton.classList.add('active', 'bg-success', 'text-white');
-}
-
-
-  const activeButton = document.getElementById(`tab-${tipo}`);
-  if (activeButton) {
-    activeButton.classList.add('active', 'bg-success', 'text-white');
-  }
-
+  // Caso 2: estructura con 'izquierda' y 'derecha'
+else if (data.izquierda && data.derecha) {
   container.innerHTML = `
     <div class="col-md-6">
-      ${data.items.map(item => {
-    if (item.tipo === 'titulo') {
-      return `
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--nar); padding-bottom: 4px; margin-bottom: 12px; margin-right:10px;">
-              <h5 style="margin: 0;">${item.texto}</h5>
-              ${['destilados', 'vino'].includes(tipo) ? `
-                <div style="display: flex; gap: 24px; font-size: 0.7rem; font-weight: 500;">
-                  <span style="font-size: 0.9rem !important;">COPA</span>
-                  <span style="font-size: 0.9rem !important;">BOT</span>
-                </div>` : ''}
-            </div>
-          `;
-    }
-
-    if (item.tipo === 'espacio') return '<br>';
-    if (item.tipo === 'nota') return `<small class="d-block fw-bold mb-3">${wrapText(item.texto, 50)}</small>`;
-
-    if ('bot' in item) {
-      return `
-          <div class="mb-3">
-            <div class="d-flex justify-content-between">
-              <strong style="flex: 1;">${wrapText(item.nombre, 25)}</strong>
-              <span style="width: 50px; text-align: right;">${item.copa ? `$${item.copa}` : 'N/A'}</span>
-              <span style="width: 50px; text-align: right;">$${item.bot}</span>
-            </div>
-            ${item.descripcion ? `<small class="text-muted d-block">${wrapText(item.descripcion, 33)}</small>` : ''}
-          </div>
-        `;
-    }
-
-    return `
-        <div class="mb-3">
-          <div class="d-flex justify-content-between">
-            <strong>${wrapText(item.nombre, 25)}</strong>
-            <span>$${item.precio}</span>
-          </div>
-          ${item.descripcion ? `<small class="text-muted d-block">${wrapText(item.descripcion, 33)}</small>` : ''}
-        </div>
-      `;
-  }).join('')}
+      ${data.izquierda.map(renderBloque).join('')}
     </div>
-
-    
     <div class="col-md-6">
-      <div class="row row-cols-2 g-2">
-        ${data.imagenes.map(img => `
-          <div class="col text-center">
-            <p class="titulo-imagen">
-              <span>${wrapTextBackwards(img.titulo, 28)}</span>
-            </p>
+      <div class="row">
+        ${data.derecha.map(img => `
+          <div class="col-6 text-center mb-3">
+            <p class="titulo-imagen"><span>${wrapTextBackwards(img.titulo, 28)}</span></p>
             <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
           </div>
         `).join('')}
       </div>
     </div>
   `;
-
-  
 }
+
+
+  // Caso 3: estructura con 'items' e 'imagenes'
+else if (data.items && data.imagenes) {
+  container.innerHTML = `
+    <div class="col-md-6">
+      ${data.items.map(renderBloque).join('')}
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        ${data.imagenes.map(img => `
+          <div class="col-6 text-center mb-3">
+            <p class="titulo-imagen"><span>${wrapTextBackwards(img.titulo, 28)}</span></p>
+            <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+  else if (data.items && data.imagenes) {
+  container.innerHTML = `
+    <div class="col-md-6">
+      ${data.items.map(renderBloque).join('')}
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        ${data.imagenes.map(img => `
+          <div class="col-md-6 mb-3 text-center">
+            <p class="titulo-imagen"><span>${wrapTextBackwards(img.titulo, 28)}</span></p>
+            <img src="${img.src}" alt="${img.titulo}" class="img-fluid rounded shadow-sm">
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+
+  // Fallback
+  else {
+    container.innerHTML = '<p class="text-danger">Sección no disponible.</p>';
+  }
+}
+
+
+function renderBloque(bloque) {
+  if (bloque.tipo === 'titulo') {
+    return `
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--nar); padding-bottom: 4px; margin-bottom: 12px;">
+        <h5 style="margin: 0;">${bloque.texto}</h5>
+      </div>`;
+  }
+
+  if (bloque.tipo === 'espacio') return '<br>';
+
+  if (bloque.tipo === 'nota') {
+    return `<small class="d-block fw-bold mb-3">${wrapText(bloque.texto, 50)}</small>`;
+  }
+
+  if (bloque.tipo === 'imagen') {
+    return `
+      <div class="text-center mb-3">
+        <p class="titulo-imagen"><span>${wrapTextBackwards(bloque.titulo, 28)}</span></p>
+        <img src="${bloque.src}" alt="${bloque.titulo}" class="img-fluid rounded shadow-sm">
+      </div>`;
+  }
+
+  if ('bot' in bloque) {
+    return `
+      <div class="mb-3">
+        <div class="d-flex justify-content-between">
+          <strong style="flex: 1;">${wrapText(bloque.nombre, 25)}</strong>
+          <span style="width: 50px; text-align: right;">${bloque.copa ? `$${bloque.copa}` : 'N/A'}</span>
+          <span style="width: 50px; text-align: right;">$${bloque.bot}</span>
+        </div>
+        ${bloque.descripcion ? `<small class="text-muted d-block">${wrapText(bloque.descripcion, 33)}</small>` : ''}
+      </div>`;
+  }
+
+  if ('precio' in bloque) {
+    return `
+      <div class="mb-3">
+        <div class="d-flex justify-content-between">
+          <strong>${wrapText(bloque.nombre, 25)}</strong>
+          <span>$${bloque.precio}</span>
+        </div>
+        ${bloque.descripcion ? `<small class="text-muted d-block">${wrapText(bloque.descripcion, 33)}</small>` : ''}
+      </div>`;
+  }
+
+  return '';
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const pathname = window.location.pathname.toLowerCase();
