@@ -47,6 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburgerBtn.setAttribute('aria-expanded', isOpen);
             mobileMenu.setAttribute('aria-hidden', !isOpen);
           });
+
+          // Cerrar menú al hacer clic fuera de él
+          document.addEventListener('click', (event) => {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnButton = hamburgerBtn.contains(event.target);
+            const isMenuOpen = mobileMenu.classList.contains('open');
+
+            if (!isClickInsideMenu && !isClickOnButton && isMenuOpen) {
+              mobileMenu.classList.remove('open');
+              hamburgerBtn.setAttribute('aria-expanded', 'false');
+              mobileMenu.setAttribute('aria-hidden', 'true');
+            }
+          });
         }
       });
   }
