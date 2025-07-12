@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (currentPage === 'index.html') {
             desktopNav.style.top = '65%';
           } else if (currentPage === 'eventos.html') {
-            desktopNav.style.top = '35%';
+            desktopNav.style.top = '40%';
           } else {
             desktopNav.style.top = '10%';
           }
