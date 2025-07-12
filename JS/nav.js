@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const isDesktop = window.innerWidth >= 768;
         const desktopNav = document.getElementById('desktopNav');
-        const currentPage = window.location.pathname.split('/').pop().toLowerCase() || 'index.html';
+
+        // Detectar página actual
+        let currentPage = window.location.pathname.split('/').pop().toLowerCase();
+        if (!currentPage || currentPage === '') currentPage = 'index.html';
 
         // Nav desktop: posición absoluta centrada según página
         if (isDesktop && desktopNav) {
@@ -29,24 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
           desktopNav.style.textAlign = 'center';
         }
 
-// Resaltar enlace activo
-const links = navContainer.querySelectorAll('a.nav-link-custom');
-links.forEach(link => {
-  const href = link.getAttribute('href');
-  if (!href) return;
+        // Resaltar enlace activo
+        const links = navContainer.querySelectorAll('a.nav-link-custom');
+        links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (!href) return;
 
-  const hrefNormalized = href.split('/').pop().toLowerCase();
-  const pageNormalized = currentPage.toLowerCase(); // <-- esto asegura que ambas estén en minúsculas
-
-  if (hrefNormalized === pageNormalized) {
-    link.classList.add('active');
-  }
-});
-
+          const hrefNormalized = href.split('/').pop().toLowerCase();
+          if (hrefNormalized === currentPage) {
+            link.classList.add('active');
+          }
+        });
 
         // Funcionalidad botón hamburguesa móvil
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mobileMenu = document.getElementById('mobileMenu');
+
         if (hamburgerBtn && mobileMenu) {
           hamburgerBtn.addEventListener('click', () => {
             const isOpen = mobileMenu.classList.toggle('open');
@@ -54,7 +55,7 @@ links.forEach(link => {
             mobileMenu.setAttribute('aria-hidden', !isOpen);
           });
 
-          // Cerrar menú al hacer clic fuera de él
+          // Cerrar menú al hacer clic fuera
           document.addEventListener('click', (event) => {
             const isClickInsideMenu = mobileMenu.contains(event.target);
             const isClickOnButton = hamburgerBtn.contains(event.target);
