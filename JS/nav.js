@@ -9,17 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const isDesktop = window.innerWidth >= 768;
         const desktopNav = document.getElementById('desktopNav');
 
-        // Detectar página actual
-        let currentPage = window.location.pathname.split('/').pop().toLowerCase();
+        // Detectar página actual y ruta
+        const pathname = window.location.pathname.toLowerCase();
+        let currentPage = pathname.split('/').pop();
         if (!currentPage || currentPage === '') currentPage = 'index.html';
+
+        const isHome = currentPage === 'index.html';
+        const isEventos = pathname.includes('/eventos');
 
         // Nav desktop: posición absoluta centrada según página
         if (isDesktop && desktopNav) {
           desktopNav.style.position = 'absolute';
 
-          if (currentPage === 'index.html') {
+          if (isHome) {
             desktopNav.style.top = '65%';
-          } else if (currentPage === 'eventos.html') {
+          } else if (isEventos) {
             desktopNav.style.top = '40%';
           } else {
             desktopNav.style.top = '10%';
@@ -36,13 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const links = navContainer.querySelectorAll('a.nav-link-custom');
         links.forEach(link => {
           const href = link.getAttribute('href');
-          if (!href || href.startsWith('http')) return; // Ignorar enlaces externos
+          if (!href || href.startsWith('http')) return;
 
           const hrefNormalized = href.split('/').pop().toLowerCase();
 
-          if (
-            currentPage === 'index.html' && (hrefNormalized === 'index.html' || hrefNormalized === '')
-          ) {
+          if (isHome && (hrefNormalized === 'index.html' || hrefNormalized === '')) {
             link.classList.add('active');
           } else if (hrefNormalized === currentPage) {
             link.classList.add('active');
@@ -59,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.setAttribute('aria-hidden', !isOpen);
           });
 
-          // Cerrar menú al hacer clic fuera de él
+          // Cerrar menú al hacer clic fuera
           document.addEventListener('click', (event) => {
             const isClickInsideMenu = mobileMenu.contains(event.target);
             const isClickOnButton = hamburgerBtn.contains(event.target);
