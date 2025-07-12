@@ -36,10 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const links = navContainer.querySelectorAll('a.nav-link-custom');
         links.forEach(link => {
           const href = link.getAttribute('href');
-          if (!href) return;
+          if (!href || href.startsWith('http')) return; // Ignorar enlaces externos
 
           const hrefNormalized = href.split('/').pop().toLowerCase();
-          if (hrefNormalized === currentPage) {
+
+          if (
+            currentPage === 'index.html' && (hrefNormalized === 'index.html' || hrefNormalized === '')
+          ) {
+            link.classList.add('active');
+          } else if (hrefNormalized === currentPage) {
             link.classList.add('active');
           }
         });
@@ -47,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Funcionalidad botón hamburguesa móvil
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-
         if (hamburgerBtn && mobileMenu) {
           hamburgerBtn.addEventListener('click', () => {
             const isOpen = mobileMenu.classList.toggle('open');
@@ -55,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.setAttribute('aria-hidden', !isOpen);
           });
 
-          // Cerrar menú al hacer clic fuera
+          // Cerrar menú al hacer clic fuera de él
           document.addEventListener('click', (event) => {
             const isClickInsideMenu = mobileMenu.contains(event.target);
             const isClickOnButton = hamburgerBtn.contains(event.target);
