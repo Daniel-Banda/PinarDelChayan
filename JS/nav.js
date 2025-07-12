@@ -29,14 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
           desktopNav.style.textAlign = 'center';
         }
 
-        // Resaltar enlace activo
-        const links = navContainer.querySelectorAll('a.nav-link-custom');
-        links.forEach(link => {
-          const href = link.getAttribute('href').split('/').pop().toLowerCase();
-          if (href === currentPage) {
-            link.classList.add('active');
-          }
-        });
+// Resaltar enlace activo
+const links = navContainer.querySelectorAll('a.nav-link-custom');
+links.forEach(link => {
+  const href = link.getAttribute('href');
+  if (!href) return;
+
+  const hrefNormalized = href.split('/').pop().toLowerCase();
+  const pageNormalized = currentPage.toLowerCase(); // <-- esto asegura que ambas estén en minúsculas
+
+  if (hrefNormalized === pageNormalized) {
+    link.classList.add('active');
+  }
+});
+
 
         // Funcionalidad botón hamburguesa móvil
         const hamburgerBtn = document.getElementById('hamburgerBtn');
